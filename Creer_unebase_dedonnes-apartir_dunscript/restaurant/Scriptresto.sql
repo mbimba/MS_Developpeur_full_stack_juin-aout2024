@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `categorie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categorie` (
-  `id_categorie` int(11) NOT NULL,
+  `id_categorie` int(11) NOT NULL AUTO_INCREMENT,
   `nom_categorie` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_categorie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,12 +47,12 @@ DROP TABLE IF EXISTS `client`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `client` (
-  `id_client` int(11) NOT NULL,
+  `id_client` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) DEFAULT NULL,
   `prenom` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,14 +73,17 @@ DROP TABLE IF EXISTS `commande`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `commande` (
-  `id_commande` int(11) NOT NULL,
+  `id_commande` int(11) NOT NULL AUTO_INCREMENT,
   `id_client` int(11) DEFAULT NULL,
+  `id_plat` int(11) DEFAULT NULL,
   `date_commande` date DEFAULT NULL,
   `total` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id_commande`),
   KEY `id_client` (`id_client`),
-  CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  KEY `id_plat` (`id_plat`),
+  CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`),
+  CONSTRAINT `commande_ibfk_2` FOREIGN KEY (`id_plat`) REFERENCES `plat` (`id_plat`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +92,7 @@ CREATE TABLE `commande` (
 
 LOCK TABLES `commande` WRITE;
 /*!40000 ALTER TABLE `commande` DISABLE KEYS */;
-INSERT INTO `commande` VALUES (1,1,'2023-09-01',45.90),(2,2,'2023-09-01',24.25),(3,3,'2023-09-01',19.75),(4,4,'2023-09-01',34.75),(5,5,'2023-09-01',22.50);
+INSERT INTO `commande` VALUES (1,1,6,'2023-09-01',45.90),(2,2,2,'2023-09-02',24.25),(3,3,3,'2023-09-03',19.75),(4,4,4,'2023-09-04',34.75),(5,5,5,'2023-09-05',22.50);
 /*!40000 ALTER TABLE `commande` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,14 +104,14 @@ DROP TABLE IF EXISTS `plat`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `plat` (
-  `id_plat` int(11) NOT NULL,
+  `id_plat` int(11) NOT NULL AUTO_INCREMENT,
   `nom_plat` varchar(50) DEFAULT NULL,
   `id_categorie` int(11) DEFAULT NULL,
   `prix` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id_plat`),
   KEY `id_categorie` (`id_categorie`),
   CONSTRAINT `plat_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_categorie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-06-13 15:47:57
+-- Dump completed on 2024-06-14  9:43:47
