@@ -170,15 +170,36 @@ SELECT MAX(salaire) AS salaire_maximum, MIN(salaire) AS salaire_minimum, MAX(sal
 FROM employe;
 
 	-- 6. Rechercher le nombre de titres différents.
+SELECT COUNT(DISTINCT titre) AS nombre_de_titres
+FROM employe;
 
 	-- 7. Pour chaque titre, compter le nombre d'employés possédant ce titre.
+		-- 1ère proposition
+SELECT titre, COUNT(*) as nombre_employes FROM employe
+GROUP BY titre
+HAVING COUNT(*) > 1;		-- 'Le HAVING La clause' est utilisée pour filtrer les résultats et ne montrer que les titres qui ont plus d'un employé.
+		-- 2ème proposition
+SELECT titre, COUNT(*) as nombre_employes FROM employe -- Pour montrer tous les titres, y compris ceux qui n'ont qu'un seul employé, on peut supprimer le 'HAVING clause'.
+GROUP BY titre;
 
-	-- 8. Pour chaque nom de département, afficher le nom du département et le nombre d'employés
+
+	-- 8. Pour chaque nom de département, afficher le nom du département et le nombre d'employés.
+SELECT d.nom, COUNT(e.noemp) as nombre_employes FROM employe e
+JOIN dept d ON e.nodep = d.nodept
+GROUP BY d.nom;
 
 	-- 9. Rechercher les titres et la moyenne des salaires par titre dont la moyenne est supérieure à la moyenne des salaires des Représentants.
+SELECT titre, AVG(salaire) as moyenne_salaire FROM employe
+WHERE titre != 'représentant'
+GROUP BY titre
+HAVING AVG(salaire) > (SELECT AVG(salaire) FROM employe
+WHERE titre = 'représentant');
 
 	-- 10. Rechercher le nombre de salaires renseignés et le nombre de taux de commission renseignés.
-
+SELECT
+COUNT(DISTINCT CASE WHEN tauxcom IS NOT NULL THEN noemp END) as nombre_tauxcom,
+COUNT(DISTINCT CASE WHEN tauxcom IS NULL THEN noemp END) as nombre_salaires
+FROM employe;
 
 
 
