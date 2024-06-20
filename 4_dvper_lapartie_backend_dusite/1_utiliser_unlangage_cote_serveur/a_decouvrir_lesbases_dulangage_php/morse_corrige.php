@@ -7,7 +7,7 @@
 </head>
 <body>
   
-
+<h1 style="text-align:center; color:#FF0000"> Bienvenue sur ma page de traduction de texte </h1>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
  
   <div class="col-md-6">
