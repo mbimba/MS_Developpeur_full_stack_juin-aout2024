@@ -43,8 +43,14 @@ settype($a, "integer");
 echo $a;                // Affiche: 15
 ?>
 
+<?php
+$db = new PDO('mysql:host=localhost;dbname=record;charset=utf8', 'root', '');
 
+?>
 
+<?php
+
+?>
 
 
 
