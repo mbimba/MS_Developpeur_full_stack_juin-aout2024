@@ -1,81 +1,43 @@
-
-
-
-
-
+<?php
+require_once('fonctions.php');
+$artistes = getArtistes();
+?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCODE: EXERCICE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<title>Ajouter un disque</title>
 </head>
 <body>
-    
-<h5>Ajouter un vinyle</h5>
-<form>
-  <div class="form-group col-md-6">
-    <label for="exampleFormControlInput1">Title</label>
-    <input type="title" class="form-control" id="" placeholder="Enter title">
-  </div>
+	<h1>Ajouter un disque</h1>
+	<form action="add_script.php" method="post" enctype="multipart/form-data">
+		<label for="title">Titre:</label>
+		<input type="text" id="title" name="title" required><br>
 
+		<label for="artist">Artiste:</label>
+		<select id="artist" name="artist" required>
+			<?php foreach ($artistes as $artiste) : ?>
+				<option value="<?= $artiste['artist_id'] ?>"><?= $artiste['name'] ?></option>
+			<?php endforeach; ?>
+		</select><br>
 
+		<label for="year">Année:</label>
+		<input type="number" id="year" name="year" required><br>
 
-<div class="form-group col-md-6">
-    <label for="disabledSelect" class="form-label">Artist</label>
-      <select id="" class="form-select">
-        <option>Queens of the STone Age</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-</div>
+		<label for="genre">Genre:</label>
+		<input type="text" id="genre" name="genre" required><br>
 
+		<label for="label">Label:</label>
+		<input type="text" id="label" name="label" required><br>
 
-  <div class="form-group col-md-6">
-    <label for="exampleFormControlInput1">Genre</label>
-    <input type="genre" class="form-control" id="" placeholder="Enter genre (Rock, Pop, Prog...">
-  </div>
- 
-  <div class="form-group col-md-6">
-    <label for="exampleFormControlInput1">Label</label>
-    <input type="label" class="form-control" id="" placeholder="Enter label (EMI, Warner, PolyGram, Univers sale...">
-  </div>
+		<label for="price">Prix:</label>
+		<input type="number" id="price" name="price" required><br>
 
-  <div class="form-group col-md-6">
-    <label for="exampleFormControlInput1">Price</label>
-    <input type="price" class="form-control" id="" placeholder="">
-  </div>
+		<label for="picture">Image:</label>
+		<input type="file" id="picture" name="picture"><br>
 
-  <div class="form-group col-md-6">
-    <label for="fichier" class="form-label">Picture</label>
-    <input class="form-control" type="file" id="">
-  </div>
-
-<br>
-  <button type="button" class="btn btn-primary">Ajouter</button>
-<button type="button" class="btn btn-primary">Retour</button>
-
-
-
-</form>
-
-
-
-<input type="file" class="form-control" id="inputGroupFile02">
-
-
-
-
-
-
-
-
-
-
+		<button type="submit">Ajouter</button>
+	</form>
+	<a href="index.php">Retour</a>
 </body>
 </html>
