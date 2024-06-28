@@ -21,20 +21,26 @@ $servername = "localhost";
     <title>Header: crud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="record.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #ff45ff4C;">
 <header>
 
-<nav>
-<ul>
+<nav class="">
+<!-- <ul>
     <li> <a href="index2.php">Index2</a> </li>
     <li> <a href="add2_form.php">Add2_form: formulaire</a> </li>
     <li>  <a href="index2.php">Index2</a> </li>
-</ul>
+</ul> -->
+
+<button type="submit" class="btn btn-primary " onclick="clickindex2()">Index2-Liste</button>
+<button type="submit" class="btn btn-secondary" onclick="clickadd2_form()">Add2_form: formulaire</button>
+<button type="submit" class="btn btn-success" onclick="clickindex2()">Index2-Liste</button>
+
 </nav>
 
 
-<h2>************************************************************************** </h2>
+<hr></hr> <!-- a remplacé par hr -->
 
 
 </header>

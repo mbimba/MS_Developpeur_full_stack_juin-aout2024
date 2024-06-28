@@ -2,7 +2,7 @@
 
 <?php include 'header2.php'; ?>
 <h2> Record: Liste </h2>
-<a href="add2_form.php">Ajouter un disque</a>
+<button type="submit" class="btn btn-primary btn-sm flex-row-reverse" onclick="ajouterundisque()">Ajouter un disque</button>  <!--    "btn-sm": pour réduire la taille du bouton -->
 
 <table  style='border: 10px solid #ccc; padding: 30px'>
 		<thead>
@@ -25,7 +25,7 @@
 
 
 
-
+        <form action='details2.php' method=GET >
 
 
         <?php 
@@ -52,7 +52,7 @@
             echo '<td>' . $row['disc_price'] . '</td>';
             echo '<td>' . $row['disc_picture'] . '</td>';
             echo '<td> <img src="pictures/'.$row["disc_picture"].'" atl="nop" style="width: 100px;">';
-            echo '<a href="details2.php?disc_id=' . $row['disc_id'] . '">Détails</a>';
+            echo '<td> <button type="submit" name="id" value=' . $row['disc_id'] . '">Détails</button>';
             echo '</td>';
             echo '</tr>';
         }

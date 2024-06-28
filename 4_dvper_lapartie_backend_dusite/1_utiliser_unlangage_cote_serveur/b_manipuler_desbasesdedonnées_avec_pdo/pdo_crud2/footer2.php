@@ -10,13 +10,17 @@
  <body>
     
  <footer>
-<h2>**************************************************************************</h2>
-<nav>
-<ul>
+<hr></hr> <!-- a remplacé par hr -->
+<nav class=" center"> 
+<!-- <ul>
     <li> <a href="">Contact2</a> </li>
     <li> <a href="">Contact2</a> </li>
     <li>  <a href="">Contact2</a> </li>
-</ul>
+</ul> -->
+
+<button type="button" class="btn btn-primary btn-sm rounded-circle" >Contact 1</button>
+<button type="button" class="btn btn-secondary btn-sm rounded-circle" >Contact 2</button>
+<button type="button" class="btn btn-success btn-sm rounded-circle" >Contact 3</button>
 </nav>
 
 
