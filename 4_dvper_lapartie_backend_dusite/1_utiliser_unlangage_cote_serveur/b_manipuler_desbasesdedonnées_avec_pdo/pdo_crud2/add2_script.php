@@ -68,9 +68,9 @@
 <?php
 require_once('header2.php');
 
-if (isset($_FILES['ajoutimage'])) {
+if (isset($_FILES['addimage'])) {
 
-    $file = $_FILES['ajoutimage'];
+    $file = $_FILES['addimage'];
     $tmp_name = $file['tmp_name'];
     $name = $file['name'];
     $type = $file['type'];
@@ -93,7 +93,7 @@ if (isset($_FILES['ajoutimage'])) {
    
     $cheminimage = uniqid() . '_' . $name;
    
-    $destination = '../../pictures/' . $cheminimage;
+    $destination = 'pictures/' . $cheminimage;
 
 
     // Déplacement du fichier uploadé
@@ -110,15 +110,15 @@ if (isset($_FILES['ajoutimage'])) {
 
 }
 
-$name = $_POST['ajoutartist'];
+$name = $_POST['addartist'];
 
 //INSERT un nom d'artiste si il n'existe pas dans la base de donnée.
-$stmt = $conn->prepare("INSERT INTO artist (artist_name) SELECT (:artist) WHERE NOT EXISTS (SELECT * FROM artist WHERE artist_name = :artist);");//ne peut pas mettre values quand il y a un where
+$stmt = $pdo->prepare("INSERT INTO artist (artist_name) SELECT (:artist) WHERE NOT EXISTS (SELECT * FROM artist WHERE artist_name = :artist);");//ne peut pas mettre values quand il y a un where
 $stmt->bindValue(':artist', $name);
 $stmt->execute();
 
 //recupere un l'id de l'artiste pour pouvoir le reutiliser apres dans insert de disc
-$stock = $conn->prepare("SELECT * FROM artist WHERE artist_name = :artist");
+$stock = $pdo->prepare("SELECT * FROM artist WHERE artist_name = :artist");
 $stock->bindValue(':artist', $name);
 $stock->execute();
 
@@ -126,23 +126,23 @@ $stock->execute();
 $artist_id = $stock->fetch()['artist_id'];
 
 //regarde si les données correspond a un disc deja rentrer
-$stmt = $conn->prepare("SELECT * FROM disc WHERE EXISTS (SELECT * FROM disc WHERE disc_title = :title AND disc_year = :year);");
-$stmt->bindValue(':title', $_POST['ajouttitle']);
-$stmt->bindValue(':year', $_POST['ajoutyear']);
+$stmt = $pdo->prepare("SELECT * FROM disc WHERE EXISTS (SELECT * FROM disc WHERE disc_title = :title AND disc_year = :year);");
+$stmt->bindValue(':title', $_POST['addtitle']);
+$stmt->bindValue(':year', $_POST['addyear']);
 $stmt->execute();
 $disc_id = $stmt->fetch()['disc_id'];
 echo $disc_id;
 
 //fait l'insert si le disc n'a pas etatis trouver 
 if($disc_id==NULL){
-$stmt = $conn->prepare("INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price, artist_id) VALUES (:title, :year, :picture, :label, :genre, :prix, :artist_id);");
-$stmt->bindValue(':title', $_POST['ajouttitle']);
-$stmt->bindValue(':year', $_POST['ajoutyear']);
-$stmt->bindValue(':prix', $_POST['ajoutprix']);
+$stmt = $pdo->prepare("INSERT INTO disc (disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price, artist_id) VALUES (:title, :year, :picture, :label, :genre, :prix, :artist_id);");
+$stmt->bindValue(':title', $_POST['addtitle']);
+$stmt->bindValue(':year', $_POST['addyear']);
+$stmt->bindValue(':prix', $_POST['addprix']);
 $stmt->bindParam(':picture', $cheminimage);
-$stmt->bindValue(':label', $_POST['ajoutlabel']); 
-$stmt->bindValue(':genre', $_POST['ajoutgenre']); 
-$stmt->bindParam(':artist_id', $artist_id);//bind param permet de transmettre une variable php en parametre utile pour mettre un int
+$stmt->bindValue(':label', $_POST['addlabel']); 
+$stmt->bindValue(':genre', $_POST['addgenre']); 
+$stmt->bindParam(':artist_id', $artist_id);//bind param permet de transmettre une variable php en paramètre utile pour mettre un int
 $stmt->execute();}
 
 header('Location:index2.php');
