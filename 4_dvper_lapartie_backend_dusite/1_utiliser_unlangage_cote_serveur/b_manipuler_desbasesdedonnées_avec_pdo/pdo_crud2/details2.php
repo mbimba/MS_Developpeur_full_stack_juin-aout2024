@@ -64,15 +64,18 @@ try{
     <strong style="color:blue"> Genre:</strong> <?php echo $album['disc_genre'];?><br>
     <strong style="color:blue"> Prix:</strong> <?php echo $album['disc_price'];?>€<br>
 </p>
-<div class="container">
-                <form action="delete2_form.php" method='GET' class='col-6 mt-5'>
-                    <button type='SUBMIT' name='delete' CLASS='btn btn-danger' value='<?php echo $album['disc_id']; ?>'>SUPPRIMER</button>
-                </form>
+<div class="container col-12">
+                
                 <form action="update2_form.php" method='GET' class='col-6 mt-5'>
-                    <button type='SUBMIT' name='modif' CLASS='btn btn-warning' value='<?php echo $album['disc_id']; ?>'>modifier</button>
+                    <button type='SUBMIT' name='modif' CLASS='btn btn-warning btn-sm' value='<?php echo $album['disc_id']; ?>'>Modifier</button>
                 </form>
-<button type="button" class="btn btn-success btn-sm" onclick="redirectToAnother()">Retour</button>
+                <form action="delete2_form.php" method='GET' class='col-6 mt-5'>
+                    <button type='SUBMIT' name='delete' CLASS='btn btn-danger btn-sm' value='<?php echo $album['disc_id']; ?>'>Supprimer</button>
+                    <button type="button" class="btn btn-success btn-sm" onclick="redirectToAnother()">Retour</button>
+                </form>
 </div>
+
+<!--       *************             -->
 <?php
   }else{
     echo "Aucun disque trouvé avec cet ID";
