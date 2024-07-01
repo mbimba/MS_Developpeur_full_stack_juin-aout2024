@@ -39,8 +39,8 @@ function clickindex2() {
   window.location.href = "add2_form.php";
 }
 
-function clickindex2(){
-  window.location.href = "index2.php";
+function clickupdate_form(){
+  window.location.href = "update2_form.php";
 }
 
 
@@ -58,3 +58,22 @@ function clickindex2(){
     window.location.href = "add2_form.php";
    
    }
+
+
+
+
+  /*     ------FONCTION BOUTON "Modifier" et "supprimer" sur la page DETAILS2.PHP ------  */
+  function clickmodifier() {
+
+    window.location.href = "update2_form.php";
+   
+   }
+   function clicksupprimer() {
+
+    window.location.href = "delete2_form.php";
+   
+   }
+
+  
+
+     /*     ------ UPDATE ------  */

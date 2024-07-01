@@ -1,4 +1,4 @@
-<!--              PAGE UPDATE_FORM                   -->
+<!--              PAGE UPDATE_FORM: = Mise à jour // Modifier un enregistrement existant : formulaire de modification       -->
 
 <?php include 'header2.php'; ?>
 
@@ -12,9 +12,10 @@
 
                 ?>
 <!-- ******************                 MON FORMULAIRE               ************* -->
+<h1>Modifier un vinyle</h1>
 
 <div class='container'>
-<form action="add2_script.php" method="POST" enctype="multipart/form-data" id="">
+<form action="update2_script.php" method="POST" enctype="multipart/form-data" id="">
     <div class="form-group col-md-6">
         <label for="title">Title :</label>
 
@@ -29,7 +30,7 @@
 <!-- ****************** year ************* -->
         <div class="form-group col-md-6">
         <label for="">year :</label> 
-        <input  class="form-control" type="number" name="addyear" value='<?php echo $result['disc_year']; ?>' required id="year" min="1900" max="2024" required><br>
+        <input  class="form-control" type="number" name="addyear" value='<?php echo $result['disc_year']; ?>' required id="year" min="1900" max="2024" ><br>
         </div>
 <!-- ****************** genre ************* -->
         <div class="form-group col-md-6">
@@ -59,22 +60,6 @@
 
 </form>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

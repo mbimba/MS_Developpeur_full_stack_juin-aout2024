@@ -1,4 +1,4 @@
-<!-- FORMULAIRE ADD -->
+<!-- FORMULAIRE ADD_form: Saisir un nouvel enregistrement : formulaire d'ajout,-->
 
 <?php include 'header2.php'; ?>
 
@@ -21,7 +21,7 @@
 <!-- ****************** year ************* -->
         <div class="form-group col-md-6">
         <label for="">year :</label> 
-        <input  class="form-control" type="number" name="addyear" id="year" min="1900" max="2024" required><br>
+        <input  class="form-control" type="number" name="addyear" id="year" min="1500" max="2024" required><br>
         </div>
 <!-- ****************** genre ************* -->
         <div class="form-group col-md-6">

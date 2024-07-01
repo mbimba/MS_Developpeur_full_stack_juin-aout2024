@@ -64,11 +64,15 @@ try{
     <strong style="color:blue"> Genre:</strong> <?php echo $album['disc_genre'];?><br>
     <strong style="color:blue"> Prix:</strong> <?php echo $album['disc_price'];?>€<br>
 </p>
-
-<button type="button" class="btn btn-primary btn-sm">Modifier</button>
-<button type="button" class="btn btn-secondary btn-sm">Supprimer</button>
+<div class="container">
+                <form action="delete2_form.php" method='GET' class='col-6 mt-5'>
+                    <button type='SUBMIT' name='delete' CLASS='btn btn-danger' value='<?php echo $album['disc_id']; ?>'>SUPPRIMER</button>
+                </form>
+                <form action="update2_form.php" method='GET' class='col-6 mt-5'>
+                    <button type='SUBMIT' name='modif' CLASS='btn btn-warning' value='<?php echo $album['disc_id']; ?>'>modifier</button>
+                </form>
 <button type="button" class="btn btn-success btn-sm" onclick="redirectToAnother()">Retour</button>
-
+</div>
 <?php
   }else{
     echo "Aucun disque trouvé avec cet ID";

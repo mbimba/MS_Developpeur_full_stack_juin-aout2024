@@ -35,7 +35,7 @@ $servername = "localhost";
 
 <button type="submit" class="btn btn-primary " onclick="clickindex2()">Index2-Liste</button>
 <button type="submit" class="btn btn-secondary" onclick="clickadd2_form()">Add2_form: formulaire</button>
-<button type="submit" class="btn btn-success" onclick="clickindex2()">Index2-Liste</button>
+<button type="submit" class="btn btn-success" onclick="clickupdate_form()">UPDATE_FORM</button>
 
 </nav>
 
