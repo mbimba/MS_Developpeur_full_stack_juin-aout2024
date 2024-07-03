@@ -24,14 +24,7 @@ $disc_picture = $verif->fetch()['disc_picture'];
 // Récupération de l'ID de l'artiste
 
 $stock = $pdo->prepare("SELECT * FROM artist WHERE artist_name = :artist");
-$stock->bindValue(':artist', $nameartist);
-$stock->execute();
-$artist_id = $stock->fetch()['artist_id'];
-
-// Récupération de l'ID de l'artiste
-
-$stock = $pdo->prepare("SELECT * FROM artist WHERE artist_name = :artist");
-$stock->bindValue(':artist', $nameartist);
+$stock->bindParam(':artist', $nameartist);
 $stock->execute();
 $artist_id = $stock->fetch()['artist_id'];
 

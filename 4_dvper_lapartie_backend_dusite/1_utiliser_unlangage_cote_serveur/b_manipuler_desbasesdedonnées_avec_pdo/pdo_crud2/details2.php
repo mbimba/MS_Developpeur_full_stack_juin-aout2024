@@ -52,6 +52,8 @@ try{
         $stmt->execute();
         $album = $stmt->fetch(PDO::FETCH_ASSOC);
         
+
+        
         if($album){
     ?>
 
@@ -65,6 +67,9 @@ try{
     <strong style="color:blue"> Prix:</strong> <?php echo $album['disc_price'];?>€<br>
 </p>
 <div class="container col-12">
+    <?php 
+    echo $_GET['id'];
+    ?>
                 
                 <form action="update2_form.php" method='GET' class='col-6 mt-5'>
                     <button type='SUBMIT' name='modif' CLASS='btn btn-warning btn-sm' value='<?php echo $album['disc_id']; ?>'>Modifier</button>
@@ -89,7 +94,9 @@ try{
 }
 ?>
 
-
+<?php 
+    echo $_GET['id'];
+    ?>
 
 
 

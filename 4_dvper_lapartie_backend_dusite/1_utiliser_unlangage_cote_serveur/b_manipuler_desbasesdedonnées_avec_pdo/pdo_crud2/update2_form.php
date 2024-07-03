@@ -53,7 +53,7 @@
         <label for="image">Image du disque :</label><br><br>
         <input type="file" name="addimage" id="image" accept="image/*<?php echo $result['disc_picture']; ?>" alt='<?php echo $result['disc_title']; ?>' required> <br><br>
 
-        <button type="submit" class="btn btn-primary btn-sm" name="modif" value='<?php echo $_GET['modif']; ?>' onclick="ajout()">Ajouter</button>          <!--    "btn-sm": pour réduire la taille du bouton -->
+        <button type="submit" class="btn btn-primary btn-sm" name="modif" value='<?php echo $_GET['modif']; ?>'>Ajouter</button>          <!--    "btn-sm": pour réduire la taille du bouton -->
         <button type="button" class="btn btn-primary btn-sm" onclick="redirectToAnother()">Retour</button><br><br>
         </div>
 

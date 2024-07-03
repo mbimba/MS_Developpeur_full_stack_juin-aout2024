@@ -72,12 +72,12 @@ $name = $_POST['addartist'];
 
 //INSERT un nom d'artiste si il n'existe pas dans la base de donnée.
 $stmt = $pdo->prepare("INSERT INTO artist (artist_name) SELECT (:artist) WHERE NOT EXISTS (SELECT * FROM artist WHERE artist_name = :artist);");//ne peut pas mettre values quand il y a un where
-$stmt->bindValue(':artist', $name);
+$stmt->bindParam(':artist', $name);
 $stmt->execute();
 
 //recupere un l'id de l'artiste pour pouvoir le reutiliser apres dans insert de disc
 $stock = $pdo->prepare("SELECT * FROM artist WHERE artist_name = :artist");
-$stock->bindValue(':artist', $name);
+$stock->bindParam(':artist', $name);
 $stock->execute();
 
 //stock de l'id de l'artiste
