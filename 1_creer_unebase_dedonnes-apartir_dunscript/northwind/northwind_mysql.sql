@@ -1,5 +1,6 @@
 -- Active: 1679985753310@@127.0.0.1@3306@hotel
-DROP DATABASE `northwind`;
+
+DROP DATABASE IF EXISTS `northwind`;
 CREATE DATABASE `northwind`;
 USE `northwind`;
 
