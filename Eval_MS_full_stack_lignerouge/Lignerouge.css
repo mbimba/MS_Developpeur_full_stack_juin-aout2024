@@ -1,0 +1,243 @@
+
+/* ----------------------------------Page accueil ---------------------------------------------------------------------*/
+.espace {
+  margin: 0 15px;        /* Pour créer de l'espace entre les éléments du menu "entete" partie nav */
+
+
+}
+
+
+.espacebouton{
+  margin: 0 85px;
+}
+
+
+.barrerecherche{               /* Pour fixer la barre de recherche sur la vidéo */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+video{        /* La vidéo prend toute la largeur de la page */
+  object-fit: fill;
+}
+
+.zoomimage img:hover{             /* Pour créer l'effet zoom sur les images "catégorie" de la page accueil */
+ 
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
+  -webkit-transition:1s ease-in-out;
+  transition:1s ease-in-out
+  
+}
+
+
+.zoomimage img {             /* Pour fixer les dimensions (hauteur et largeur) de l'image zoomée */
+ 
+  width: auto;
+  max-height: 200px;
+  
+}
+
+.zoomimage {                       /* Nous utilisons la propriété CSS 'position : relative;' pour nous assurer que l'image reste dans le cadre défini par son élément parent.  */
+  
+
+  position : relative;
+  overflow : hidden;
+  transition : 0.5s;
+
+  }
+
+
+
+.parallax{          /* Parallax entre mon image de fond et mes images catégories de plats */
+  background-image:  url("Mesimages/imagedefondpagecommande2.jpeg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+}
+
+/* -------------------------------------------MEDIA QUIERIES PAGE ACCUEIL -------------------------------------------------------------*/
+
+
+
+@media (max-width: 480px) {
+  
+    #imagedefond {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+
+
+/* Les logos réseaux sociaux en pieds de page */
+
+.meslogosreso:hover {
+    background-color: yellowgreen;        /* Les bordures sont rouges lors du survol avec la souris */
+}
+
+
+/* Début annimation CSS sur mes logos réseaux */
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+ .meslogosreso {
+
+    animation: 3s slidein;
+    animation-iteration-count: infinite;    /* L'animation tourne en boucle */
+  }
+  
+  
+  /* Début animation image de fond */
+  .imagedefond{
+   
+    animation:
+    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate bounce;
+  }
+  @keyframes rise {
+    from {
+      transform: translateY(110vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateX(-50vw);
+    }
+    to {
+      transform: translateX(50vw);
+    }
+  }
+   /* Fin animation image de fond */
+/* -----------------------------------------FIN MEDIA QUIERIES PAGE ACCUEIL -------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------DEBUT Page TOUS LES PLATS -------------------------------------------------------- */
+
+.tailletitreplat{
+font-size:larger;
+}
+
+
+.tailledescriplat{
+  font-size: smaller;
+}
+
+.tailletextcommand{
+  font-size: small;
+}
+
+/*------------------------------------------Page commande-------------------------------------------------------- */
+span{
+  color:red;
+  font-size: smaller;
+}
+.inputcontact{                      /* Pour réduire la taille des éléments dans l'encadré */
+  font-size: smaller;
+}
+
+.btnquantite{
+  border-radius: 30px;
+  font-weight: bold;
+}
+.btnselectcommande{                   /* Pour une mise en page du bouton quantité et select   */
+  background-color: rgb(0, 81, 255);
+  border-radius: 30px;
+  border-color: aqua;
+  text-align: center;
+}
+
+.bordure {                                /* Pour ajouter une bordure au formulaire commande et contact  */
+  border-top: 5px #252b29 double;
+  border-right: 5px #252b29 double;
+  border-bottom: 5px #252b29 double;
+  border-left: 5px #252b29 double;
+  border-radius: 15px;
+}
+
+
+
+
+/*------------------------------------------Page contact  -------------------------------------------------------- */
+       /* POur centrer le bloc du formulaire en plein milieu de la page 
+  
+  position: absolute;                                      postulat de départ 
+  top: 60%; 
+  left: 50%;                               à 50%/50% du parent référent 
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille 
+
+
+}     */
+
+.parallax2{          /* Parallax entre mon image de fond et mes images catégories de plats */
+  background-image:  url("Mesimages/imageparralax12.jpeg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+}
+
+
+
+/*------------------------------------------FIN Page contact  -------------------------------------------------------- */
+
+
+
+
+/*------------------------------------------ Page Plats par catégorie  -------------------------------------------------------- */
+.zoomimage2 img:hover{                       /* Pour créer l'effet zoom sur les images de la page  */
+  
+
+    transform: scale(1.5);
+    transition: 0.4s;
+    width: auto;
+
+    }
+  
+
+    .zoomimage2 {                       /* Nous utilisons la propriété CSS 'position : relative;' pour nous assurer que l'image reste dans le cadre défini par son élément parent.  */
+  
+
+      position : relative;
+      overflow : hidden;
+      transition : 0.5s;
+  
+      }
+    
+.h5couleurcat{            /* Pour donner un contour au texte du h5 */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+
+/*------------------------------------------Toutes les Pages Plats par catégorie -------------------------------------------------------- */
+
+.boutonsuivetprec{
+  border-radius: 30px;
+  margin: 0 45px;      /* Pour créer de l'espace entre les boutons "précédent" et "suivant"*/
+   
+}
+

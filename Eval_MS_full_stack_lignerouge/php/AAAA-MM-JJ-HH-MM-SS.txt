@@ -1,0 +1,46 @@
+
+MB,SONIA,dave.loper@afpa.fr,01 02 06 05 05,grrrrrttt
+ttttriomphe,SONIA,dave.loper@afpa.fr,01 02 06 05 05,bye
+pascal,alain,dave.loper@afpa.fr,01 02 06 05 05,Hello!!!
+pascal,SONIA,dave.loper@afpa.fr,01 02 06 05 05,hello bj:::
+pascal,SONIA,dave.loper@afpa.fr,01 02 06 05 05,hello 
+pascal,SONIA,dave.loper@afpa.fr,01 02 06 05 05,hello
+egs gg,SONIA,dave.loper@afpa.fr,01 02 06 05 05,jcxrudrucx 
+egs gg,SONIA,dave.loper@afpa.fr,01 02 06 05 05,jcxrudrucx 
+egs gg,SONIA,dave.loper@afpa.fr,01 02 06 05 05,jcxrudrucx 
+egs gg,SONIA,dave.loper@afpa.fr,01 02 06 05 05,jcxrudrucx bbbbbb
+egs gg,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,jcxrudrucx bbbbbb
+egs gg,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,jcxrudrucx bbbbbb
+pascal hf,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande non validée
+pascal hf,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande
+pascal hf,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v
+pascal hf,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v
+pascal hf,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v
+pascal hfé,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v
+pascal hfé,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v, 
+pascal hfé,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v, 
+pascal hfé,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v, 
+pascal hfé,SONIA ,dave.loper@afpa.fr,01 02 06 05 05,commande v
+pascal,SONIA,dave.loper@afpa.fr,,bnonjour v
+pascal ér,SONIA,dave.loper@afpa.fr,01 02 06 05 05,bnonjour v
+pascal hfé,SONIA,dave.loper@afpa.fr,01 02 06 05 05,hello ms
+pascal hfé,SONIA,dave.loper@afpa.fr,01 02 06 05 05,hello ms é
+pascal hfé,SONIA elo,dave.loper@afpa.fr,01 02 06 05 05,hello ms é
+pascal hfé,SONIA élo,dave.loper@afpa.fr,01 02 06 05 05,hello ms é
+pascal hfé,SONIA élo,dave.loper@afpa.fr,01 02 06 05 05,hello ms é
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temè
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temé
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temé
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temè
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temè
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temé
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temé@
+pascal hfé,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la temé@12
+pascal hfé,SONIA  duraé,dave.loper@afpa.fr,01 02 06 05 05,héllo gardeè
+pascal hfé,SONIA  duraè,dave.loper@afpa.fr,01 02 06 05 05,héllo gardeè
+pascal hfé,SONIA  duraè,dave.loper@afpa.fr,01 02 06 05 05,héllo gardeè
+pascal hfè,SONIA  duraè,dave.loper@afpa.fr,01 02 06 05 05,héllo gardeè
+pascal hfèç,SONIA  duraè,dave.loper@afpa.fr,01 02 06 05 05,héllo gardeè
+çalobbb irêne,SONIA  dura,dave.loper@afpa.fr,01 02 06 05 05,hello la team21@
+éè,éèûüê,dave.loper@afpa.fr,01 02 06 05 05,bonjour commande élô
+pascal hfé,SONIA  durâ,dave.loper@afpa.fr,01 02 06 05 05,Bonjour, puis-je avoir un contact?
