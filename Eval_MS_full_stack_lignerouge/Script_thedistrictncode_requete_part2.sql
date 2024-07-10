@@ -30,6 +30,27 @@
 	GROUP BY p.libelle
 	ORDER BY quantite_vendue DESC;
 
+	-- Liste des 3 plats les plus vendus
+	SELECT plat.libelle, COUNT(*) AS nombre_ventes
+	FROM commande
+	JOIN plat ON commande.id_plat = plat.id
+	GROUP BY plat.libelle
+	ORDER BY nombre_ventes DESC
+	LIMIT 3;
+	-- Liste des plats les plus vendus
+	SELECT plat.libelle, COUNT(*) AS nombre_ventes
+	FROM commande
+	JOIN plat ON commande.id_plat = plat.id
+	GROUP BY plat.libelle
+	ORDER BY nombre_ventes DESC;
+	-- Liste des 6 catégories les plus populaires 
+	SELECT categorie.libelle, COUNT(*) AS nombre_ventes
+	FROM commande
+	JOIN plat ON commande.id_plat = plat.id
+	JOIN categorie ON plat.id_categorie = categorie.id
+	GROUP BY categorie.libelle
+	ORDER BY nombre_ventes DESC
+	LIMIT 6;
 	-- Le plat le plus rémunérateur
 	SELECT 
 	    p.libelle AS plat_libelle,
