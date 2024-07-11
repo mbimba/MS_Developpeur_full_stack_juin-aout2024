@@ -35,7 +35,7 @@ require_once ("php/header.php");
       <div class="carousel-item active card-img-top"> <!-- 1ER CAROUSEL AVEC 4 IMAGES -->
         <div class="card-group">
           <!-- Ajouter des cartes ici selon besoin -->
-          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
             <a href="platcategoriepizza.php">
               <img class="rounded-circle mx-auto d-block" src="images_the_district/category/pizza_cat.jpg" alt="...">
             </a>
@@ -46,7 +46,7 @@ require_once ("php/header.php");
           </div>
           <!-- Répéter pour 6 cartes ou plus selon besoin -->
           <!-- Ajouter des cartes ici selon besoin -->
-          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
             <a href="platcategorieburger.php">
               <img class="rounded-circle mx-auto d-block" src="images_the_district/category/burger_cat.jpg" alt="...">
             </a>
@@ -57,7 +57,7 @@ require_once ("php/header.php");
           </div>
           <!-- Répéter pour 6 cartes ou plus selon besoin -->
           <!-- Ajouter des cartes ici selon besoin -->
-          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
             <a href="platcategoriesandwich.php">
               <img class="rounded-circle mx-auto d-block" src="images_the_district/category/wrap_cat.jpg" alt="...">
             </a>
@@ -66,12 +66,23 @@ require_once ("php/header.php");
               <p class="card-text tailledescriplat"><i>Wraps frais faits sur place.</i></p>
             </div>
           </div>
+            <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
+            <a href="platcategorieburger.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/asian_food_cat2a.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">ASIAN</h5>
+              <p class="card-text tailledescriplat"><i>Plusieurs plats à volonté.</i></p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="carousel-item"> <!-- 2EME CAROUSEL AVEC 4 IMAGES -->
         <div class="card-group">
           <!-- Ajouter des cartes ici selon besoin -->
-          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
             <a href="platcategoriepate.php">
               <img class="rounded-circle mx-auto d-block" src="images_the_district/category/pasta_cat.jpg" alt="...">
             </a>
@@ -82,7 +93,7 @@ require_once ("php/header.php");
           </div>
           <!-- Répéter pour 6 cartes ou plus selon besoin -->
           <!-- Ajouter des cartes ici selon besoin -->
-          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
             <a href="platcategoriesandwich.php">
               <img class="rounded-circle mx-auto d-block" src="images_the_district/category/wrap_cat.jpg" alt="...">
             </a>
@@ -93,13 +104,24 @@ require_once ("php/header.php");
           </div>
           <!-- Répéter pour 6 cartes ou plus selon besoin -->
           <!-- Ajouter des cartes ici selon besoin -->
-          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
             <a href="platcategoriesalade.php">
               <img class="rounded-circle mx-auto d-block" src="images_the_district/category/salade_cat.jpg" alt="...">
             </a>
             <div class="card-body">
               <h5 class="card-title">SALADES</h5>
               <p class="card-text tailledescriplat"><i>Avec des légumes de la région.</i></p>
+            </div>
+          </div>
+           <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
+            <a href="platcategoriesalade.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/Vegan.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Veggie</h5>
+              <p class="card-text tailledescriplat"><i>Que du frais et du bio.</i></p>
             </div>
           </div>
         </div>
