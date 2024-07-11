@@ -37,6 +37,17 @@ function get_best_sellers($conn, $limit) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+/*                             *************************************************             */
+
+function get_plats_by_categorie($conn, $categorie_id) {
+    $sql = "SELECT * FROM plat WHERE id_categorie = :categorie_id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':categorie_id', $categorie_id);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 
 /*                             *************************************************             */
 

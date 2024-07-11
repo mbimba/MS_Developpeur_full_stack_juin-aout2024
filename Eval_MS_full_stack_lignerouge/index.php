@@ -46,7 +46,7 @@
                             echo '<div class="col-sm-4 p-3 bg-dark text-white zoomimage">
                                     <div class="img-fluid ">
                                         <h1>' . $categorie['libelle'] . '</h1>
-                                        <a href="platcategorie.php?id=' . $categorie['id'] . '">
+                                        <a href="plats.php?id=' . $categorie['id'] . '">
                                             <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . $categorie['image'] . '" alt="'.$category['libelle'].'">
                                         </a>
                                     </div>
@@ -67,7 +67,7 @@
                             echo '<div class="col-sm-4 p-3 bg-secondary text-white zoomimage">
                                     <div class="img-fluid ">
                                         <h1>' . $categorie['libelle'] . '</h1>
-                                        <a href="platcategorie.php?id=' . $categorie['id'] . '">
+                                        <a href="plats.php?id=' . $categorie['id'] . '">
                                             <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . $categorie['image'] . '" alt="">
                                         </a>
                                     </div>
