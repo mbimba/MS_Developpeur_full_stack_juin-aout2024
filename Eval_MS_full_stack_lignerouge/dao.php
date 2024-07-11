@@ -6,7 +6,7 @@
 // Fonction pour récupérer les catégories de la base de données
 function get_categories($conn, $limit = null, $offset = null) {
     // Requête SQL pour sélectionner toutes les catégories
-    $sql = "SELECT * FROM categorie";
+    $sql = "SELECT * FROM categorie where categorie.active = 'Yes'";
      // Si une limite est spécifiée, l'ajouter à la requête
     if ($limit !== null) {
         $sql .= " LIMIT $limit";

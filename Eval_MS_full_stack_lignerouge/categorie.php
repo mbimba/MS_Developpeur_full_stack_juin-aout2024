@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATEGORIE V3</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="Lignerouge.css" rel="stylesheet">
-</head>
-
+   <!--       ICI MA PAGE CATGORIE: Avec les Catégories de plats    -->
 
 
 <body style="background-color: #4A394a;">
@@ -38,129 +28,97 @@ require_once ("php/header.php");
 
     <!--            ****************************** 1ER CAROUSEL AVEC 4 IMAGES  ********************************************************    -->
 
-    <!--                      DEBUT CAROUSSEL CATEGORIES                     -->
-    <main>
-     
-    <!-- <div id="carouselExampleControlsNotouching" class="container-fluid carousel slide text-center" style="background-color: #4A394a;" data-bs-touch="false"> -->
-      <div id="carouselExample" class="carousel slide text-center" data-bs-ride="carousel" style="background-color: #4A394a;">
-        <div class="carousel-inner">
-
-
-            <div class="carousel-item active card-img-top">
-                <div class="card-group">     <!--            ****************** 1ER CAROUSEL AVEC 4 IMAGES  *************************    -->
-                    <!-- Ajouter des cartes ici selon besoin -->
-                    <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                        <a href="platcategorieasiatique.php">
-                        <img class="rounded-circle mx-auto d-block" src="images_the_district/category/asian_food_cat2a.jpg"  alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">ASIATIQUE</h5>
-                            <p class="card-text tailledescriplat"><i>Plusieurs plats à volonté.</i></p>  <!-- "i" permet de mettre le texte en italique -->
-                        </div>
-                    </div>
-                    <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                    <!-- Ajouter des cartes ici selon besoin -->
-                    <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                        <a href="platcategorieburger.php">
-                        <img class="rounded-circle mx-auto d-block" src="images_the_district/category/burger_cat.jpg"  alt="...">
-                    </a>
-                        <div class="card-body">
-                            <h5 class="card-title">BURGERS</h5>
-                            <p class="card-text tailledescriplat"><i>Différents burgers faits maison.</i></p>
-                        </div>
-                    </div>
-                    <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                    <!-- Ajouter des cartes ici selon besoin -->
-                    <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                        <a href="platcategoriepate.php">
-                        <img class="rounded-circle mx-auto d-block" src="images_the_district/category/pasta_cat.jpg" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">PÂTES</h5>
-                            <p class="card-text tailledescriplat"><i>Des pâte italiennes.</i></p>
-                        </div>
-                    </div>
-                    <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                    <!-- Ajouter des cartes ici selon besoin -->
-                    <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                        <a href="platcategoriesandwich.php">
-                        <img class="rounded-circle mx-auto d-block" src="images_the_district/category/wrap_cat.jpg"  alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">SANDWICHS</h5>
-                            <p class="card-text tailledescriplat"><i>Sandwichs frais composés sur place.</i></p>
-                        </div>
-                    </div>
-                   
-                    <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                </div>
+    <!-- DEBUT CAROUSSEL CATEGORIES -->
+<main>
+  <div id="carouselExample" class="carousel slide text-center" data-bs-ride="carousel" style="background-color: #4A394a;">
+    <div class="carousel-inner">
+      <div class="carousel-item active card-img-top"> <!-- 1ER CAROUSEL AVEC 4 IMAGES -->
+        <div class="card-group">
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+            <a href="platcategoriepizza.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/pizza_cat.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">PIZZAS</h5>
+              <p class="card-text tailledescriplat"><i>Pâte fine maison.</i></p>
             </div>
-            <div class="carousel-item">     <!--            ****************** 2EME CAROUSEL AVEC 4 IMAGES  *************************    -->
-            <div class="card-group">      
-                <!-- Ajouter des cartes ici selon besoin -->
-                <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                    <a href="platcategoriepizza.php">
-                    <img class="rounded-circle mx-auto d-block" src="images_the_district/category/pizza_cat.jpg"  alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">PIZZAS</h5>
-                        <p class="card-text tailledescriplat"><i>Pâte fine maison.</i></p>
-                    </div>
-                </div>
-                <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                <!-- Ajouter des cartes ici selon besoin -->
-                <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                    <a href="platcategoriesalade.php">
-                    <img class="rounded-circle mx-auto d-block" src="images_the_district/category/salade_cat.jpg"  alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">SALADES</h5>
-                        <p class="card-text tailledescriplat"><i>Avec des légumes de la région.</i></p>
-                    </div>
-                </div>
-                <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                <!-- Ajouter des cartes ici selon besoin -->
-                <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                    <a href="platcategoriegrillade.php">
-                    <img class="rounded-circle mx-auto d-block" src="images_the_district/category/grillade.jpg"  alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">GRILLADES</h5>
-                        <p class="card-text tailledescriplat"><i>Viandes et poissons cuits au feu de bois.</i></p>
-                    </div>
-                </div>
-                <!-- Répéter pour 6 cartes ou plus selon besoin -->
-                <!-- Ajouter des cartes ici selon besoin -->
-                <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-                    <a href="platcategorievegan.php">
-                    <img class="rounded-circle mx-auto d-block" src="images_the_district/category/Vegan.jpg"  alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">VEGAN</h5>
-                        <p class="card-text tailledescriplat"><i>Que du frais et du bio.</i></p>
-                    </div>
-                </div>
-                
-                <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          </div>
+          <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+            <a href="platcategorieburger.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/burger_cat.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">BURGERS</h5>
+              <p class="card-text tailledescriplat"><i>Différents burgers faits maison.</i></p>
             </div>
-</div>
-<!-- ************************************************************************** -->
-
-<!-- Ajouter d'autres items pour le carrousel ici -->
-</div>       <!--ICI Mes boutons de carousel -->
-<button class="carousel-control-prev d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="precedent()" type="button">Précédent</button>         <!-- col-sm-1 permet d'avoir des boutons d'une même largeur -->
-
-
-<button class="carousel-control-next d-none" id="carouselcatsuiv" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="suivant()"  type="button">Suivant</button>   <!-- col-sm-1 permet d'avoir des boutons d'une même largeur -->
-
-
-</div>
+          </div>
+          <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+            <a href="platcategoriesandwich.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/wrap_cat.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">WRAPS</h5>
+              <p class="card-text tailledescriplat"><i>Wraps frais faits sur place.</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"> <!-- 2EME CAROUSEL AVEC 4 IMAGES -->
+        <div class="card-group">
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+            <a href="platcategoriepate.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/pasta_cat.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">PÂTES</h5>
+              <p class="card-text tailledescriplat"><i>Des pâte italiennes.</i></p>
+            </div>
+          </div>
+          <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+            <a href="platcategoriesandwich.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/wrap_cat.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">SANDWICHS</h5>
+              <p class="card-text tailledescriplat"><i>Sandwichs frais composés sur place.</i></p>
+            </div>
+          </div>
+          <!-- Répéter pour 6 cartes ou plus selon besoin -->
+          <!-- Ajouter des cartes ici selon besoin -->
+          <div class="img-fluid col-sm-4 p-3 bg-dark text-white">
+            <a href="platcategoriesalade.php">
+              <img class="rounded-circle mx-auto d-block" src="images_the_district/category/salade_cat.jpg" alt="...">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">SALADES</h5>
+              <p class="card-text tailledescriplat"><i>Avec des légumes de la région.</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ICI Mes boutons de carousel -->
+    <button class="carousel-control-prev d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="precedent()" type="button">Précédent</button>
+      <!-- col-sm-1 permet d'avoir des boutons d'une même largeur -->
+    </button>
+    <button class="carousel-control-next d-none" id="carouselcatsuiv" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="suivant()" type="button">Suivant</button>
+      <!-- col-sm-1 permet d'avoir des boutons d'une même largeur -->
+    </button>
+  </div>
 </main>
-
+<!-- FIN CAROUSSEL CATEGORIES -->
 
 
 
