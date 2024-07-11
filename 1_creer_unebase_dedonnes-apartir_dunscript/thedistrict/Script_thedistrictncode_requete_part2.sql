@@ -21,6 +21,13 @@
 	FROM plat p
 	JOIN categorie c ON p.id_categorie = c.id;
 
+	-- Pour afficher uniquement les catégories "actives"
+SELECT * FROM categorie where categorie.active = 'Yes';
+
+	-- Faire la jointure pour avoir la catégorie "burger"
+select plat.prix, plat.libelle from plat join categorie c on c.id = plat.id_categorie where c.libelle = 'Burger' ;
+
+
 	-- Liste des plats les plus vendus par ordre décroissant
 	SELECT 
 	    p.libelle AS plat_libelle,
@@ -124,4 +131,17 @@ VALUES ('Nouveau plat', 'Description du nouveau plat', 15.50, 'image_plat.jpg', 
 UPDATE plat
 SET prix = prix * 1.10
 WHERE id_categorie = (SELECT id FROM categorie WHERE libelle = 'Pizza');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
