@@ -63,12 +63,12 @@ foreach($plats as $key => $plat) :
 <!--ICI Mes boutons de carousel -->
 <div class="carousel-controls">
 <button class="carousel-control-prev" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-Précédent
+<span class="carousel-control-prev-icon" aria-hidden="true"></span><strong>
+Précédent</strong>
 </button>
 <button class="carousel-control-next" id="carouselcatsuiv" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-Suivant
+<strong>Suivant</strong>
 </button>
 </div>
 </main>

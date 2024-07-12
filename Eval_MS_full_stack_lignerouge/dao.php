@@ -64,8 +64,14 @@ function getPlats() {
 /*                             ********************** RECUP LES CATÉGORIES: Page categorie.php  ***************************             */
 
 
-
-
+// Fonction pour récupérer toutes les catégories de la base de données
+function getCategories(){
+    global $conn; // accès à la base de données globale
+    $sql = "SELECT * FROM categorie";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 
 
 /*                             *************************************************             */
