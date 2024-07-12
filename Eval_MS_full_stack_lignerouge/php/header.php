@@ -24,10 +24,10 @@
               <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/index.php") {echo "active";}?> espace" href="index.php">Accueil</a>
             </li>
             <li class="nav-item col-sm-4 "> <!-- Lien vers categorie.php avec la classe "active" si la page actuelle est categorie.php ou l'une des sous-catégories -->
-              <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/categorie.php"||$_SERVER['REQUEST_URI'] == "/platcategorieasiatique.php"||$_SERVER['REQUEST_URI'] == "/platcategorieburger.php" ||$_SERVER['REQUEST_URI'] == "/platcategoriegrillade.php" ||$_SERVER['REQUEST_URI'] == "/platcategoriepate.php" ||$_SERVER['REQUEST_URI'] == "/platcategoriepizza.php" ||$_SERVER['REQUEST_URI'] == "/platcategoriesalade.php" ||$_SERVER['REQUEST_URI'] == "/platcategoriesandwich.php" ||$_SERVER['REQUEST_URI'] == "/platcategorievegan.php") {echo "active";}?>  espace" href="categorie.php">Catégorie</a>
+              <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/categorie.php") {echo "active";}?>  espace" href="categorie.php">Catégorie</a>
             </li>
             <li class="nav-item col-sm-4 ">   <!-- Lien vers touslesplats.php avec la classe "active" si la page actuelle est touslesplats.php -->
-              <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/touslesplats.php") {echo "active";}?>  espace" href="touslesplats.php">Plat</a>
+              <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/plats.php") {echo "active";}?>  espace" href="plats.php">Plat</a>
             </li>
             <li class="nav-item col-sm-4 "> <!-- Lien vers contact.php avec la classe "active" si la page actuelle est contact.php -->
               <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/contact.php") {echo "active";}?>  espace " href="contact.php">Contact</a>
