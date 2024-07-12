@@ -87,7 +87,7 @@
                         $plats = get_best_sellers($conn, 3);
                         foreach ($plats as $plat) {
                             echo '<div class="col-sm-4 p-3 bg-dark text-white">
-                                    <img class="rounded-2 mx-auto d-block border border-black-1" src="images_the_district/food/' . $plat['image'] . '" width="50%" height="80%" alt="">
+                                    <img class="rounded-2 mx-auto d-block border border-black-1" src="Mesimages/' . $plat['image'] . '" width="50%" height="80%" alt="">
                                 </div>';
                         }
                     ?>
