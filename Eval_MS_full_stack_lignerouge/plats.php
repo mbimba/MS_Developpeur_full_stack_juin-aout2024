@@ -7,7 +7,9 @@
 <?php
 require_once ("php/header.php");
 require_once("database.php");
-$plats = getPlats();
+$plats = getPlats();    // On récupère tous les plats de la base de données
+$groupesPlats = array_chunk($plats, 4); // On divise les plats en groupes de 4 pour les afficher dans les carrousels
+
 ?>   
 
 
@@ -18,9 +20,9 @@ $plats = getPlats();
         </div>   
 </div>
 
- <!--            ******************************  CAROUSEL AVEC 32 IMAGES DE TOUTES LES CATEGORIES ********************************************************    -->
+ <!--            ******************************  CAROUSEL AVEC 12 IMAGES DE TOUTES LES PLATS ********************************************************    -->
 
-  <!-- DEBUT CAROUSSEL TOUS LES 12 PLATS -->
+<!-- DEBUT CAROUSSEL TOUS LES 12 PLATS -->
 <main>
 <div id="carouselExample" class="carousel slide text-center" data-bs-ride="carousel" style="background-color: #4A394a;">
 <div class="carousel-inner">
@@ -28,34 +30,33 @@ $plats = getPlats();
 <?php 
 // Boucle pour afficher chaque plat
 foreach($plats as $key => $plat) : 
-  if($key % 4 === 0) :
+if($key % 4 === 0) :
 ?>
-    <div class="carousel-item <?php echo $key === 0 ? 'active' : ''; ?>">
-    <div class="card-group"> <!-- ****************** 1ER CAROUSEL AVEC 4 IMAGES ************************* -->
-    <div class="col-12 mx-auto p-2 "> <h1 class="h5couleurcat">TOUS LES PLATS</h1></div>
+<div class="carousel-item <?php echo $key === 0 ? 'active' : ''; ?>">
+<div class="card-group"> <!-- ****************** 1ER CAROUSEL AVEC 4 IMAGES ************************* -->
+<div class="col-12 mx-auto p-2 "> <h1 class="h5couleurcat">TOUS LES PLATS</h1></div>
 <?php endif; ?>
 
-    <!-- Ajouter des cartes ici selon besoin -->
-    <div class="img-fluid col-sm-3 p-3 bg-dark text-white">
-    <img class="rounded-circle mx-auto d-block" src="Mesimages/<?= $plat['image']; ?>" alt="...">
-    <div class="card-body">
-    <h5 class="card-title tailletitreplat"><?php echo $plat['libelle']; ?></h5>
-    <p class="card-text tailledescriplat"><?php echo $plat['description']; ?></p>
-    <a href="commande.php?id=<?php echo $plat['id']; ?>" class="btn btn-primary tailletextcommand">Commander</a>
-    </div>
-    </div>
+<!-- Ajouter des cartes ici selon besoin -->
+<div class="img-fluid col-sm-3 p-3 bg-dark text-white">
+<img class="rounded-circle mx-auto d-block" src="Mesimages/<?php echo $plat['image']; ?>" alt="...">
+<div class="card-body">
+<h5 class="card-title tailletitreplat"><?php echo $plat['libelle']; ?></h5>
+<p class="card-text tailledescriplat"><?php echo $plat['description']; ?></p>
+<p class="card-text tailledescriplat">Prix : <?php echo $plat['prix']; ?> €</p>
+<a href="commande.php?id=<?php echo $plat['id']; ?>" class="btn btn-primary tailletextcommand">Commander</a>
+</div>
+</div>
 <?php if(($key+1) % 4 === 0 || $key === count($plats)-1) : ?>
-    </div>
-    </div>
+</div>
+</div>
 <?php endif; ?>
 
 <?php endforeach; ?>
 
-
 <!-- Fermeture des deux balises de mon carousel-item-->
 </div>
 </div>
-
 
 <!-- ************************************************************************** -->
 
@@ -75,15 +76,7 @@ Précédent</strong>
 
 
 
-
-
-
-
-
-
-
-    <!--         ICI MON FOOTER OU PIED DE PAGE AVEC LES LOGOS    -->
+<!-- ICI MON FOOTER OU PIED DE PAGE AVEC LES LOGOS -->
 <?php
 require_once ('php/footer.php');
 ?>
-    
