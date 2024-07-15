@@ -50,13 +50,18 @@ function get_plats_by_categorie($conn, $categorie_id) {
 
 
 /*                             ******************* RECUP LES PLATS: Page plat.php  ******************************             */
-function getPlats() {
-    global $conn;
-    $query = "SELECT * FROM plat";
-    $stmt = $conn->prepare($query);
+function getPlats($conn, $idCategorie = null) {
+    // Récupère les plats de la base de données
+    $sql = "SELECT * FROM plat";
+    if ($idCategorie !== null) {
+      $sql .= " WHERE id_categorie = :idCategorie";
+    }
+    $stmt = $conn->prepare($sql);
+    if ($idCategorie !== null) {
+      $stmt->bindValue(':idCategorie', $idCategorie, PDO::PARAM_INT);
+    }
     $stmt->execute();
-    $plats = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $plats;
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
 

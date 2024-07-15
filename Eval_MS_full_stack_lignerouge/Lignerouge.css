@@ -67,6 +67,8 @@ video{        /* La vidéo prend toute la largeur de la page */
   
 }
 
+
+
 /* -------------------------------------------MEDIA QUIERIES PAGE ACCUEIL -------------------------------------------------------------*/
 
 
@@ -156,6 +158,9 @@ font-size:larger;
 .carousel-controls {             /* Pour centrer mes deux boutons: suivant et précédent  */
   text-align: center;
 }
+
+/*------------------------------------------PAGE PLATS.PHP -------------------------------------------------------- */
+
 
 
 
