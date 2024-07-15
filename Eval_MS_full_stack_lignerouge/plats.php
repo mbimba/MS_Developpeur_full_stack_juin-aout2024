@@ -13,6 +13,7 @@ if (isset($_GET['id'])) {
 } else {
   $hideButtons = false;
 }
+$categorie = getCategoryById($conn, $idCategorie);
 ?>
 
 <body style="background-color: #4A394a;">

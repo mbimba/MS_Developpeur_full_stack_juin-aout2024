@@ -79,6 +79,17 @@ function getCategories(){
   }
 
 
+  // Fonction pour récupérer une catégorie par son ID
+  function getCategoryById($conn, $idCategorie) {   // Connexion entre page categorie.php et page plats.php
+    // Requête SQL pour récupérer les informations de la catégorie sélectionnée
+    $sql = "SELECT * FROM categorie WHERE id = :idCategorie";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':idCategorie', $idCategorie);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+
 /*                             *************************************************             */
 
 
