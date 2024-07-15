@@ -30,7 +30,7 @@ $categorie = getCategoryById($conn, $idCategorie);
 <main class="container-fluid mt-3 pt-5" >
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-      <h1 class="h5couleurcat text-center">LES PLATS <?php echo $categorie['libelle']; ?></h1>
+      <h1 class="h5couleurcat text-center">LES PLATS: <?php echo $categorie['libelle']; ?></h1>
     </div>
   </div>
 
