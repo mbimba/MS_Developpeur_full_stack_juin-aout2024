@@ -147,6 +147,18 @@ font-size:larger;
   font-size: small;
 }
 
+/*------------------------------------------PAGE CATEGORIE.PHP -------------------------------------------------------- */
+
+.carousel-control-prev, .carousel-control-next {      /* Pour retirer les flèches de gauche et droite qui empêchent le clic des images */
+  display: none;
+}
+
+.carousel-controls {             /* Pour centrer mes deux boutons: suivant et précédent  */
+  text-align: center;
+}
+
+
+
 /*------------------------------------------Page commande-------------------------------------------------------- */
 span{
   color:red;
@@ -179,15 +191,7 @@ span{
 
 
 /*------------------------------------------Page contact  -------------------------------------------------------- */
-       /* POur centrer le bloc du formulaire en plein milieu de la page 
-  
-  position: absolute;                                      postulat de départ 
-  top: 60%; 
-  left: 50%;                               à 50%/50% du parent référent 
-  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille 
-
-
-}     */
+     
 
 .parallax2{          /* Parallax entre mon image de fond et mes images catégories de plats */
   background-image:  url("Mesimages/imageparralax12.jpeg");

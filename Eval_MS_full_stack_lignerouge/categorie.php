@@ -54,8 +54,8 @@ style="width:100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
     </div>
 
     <!-- ICI Mes boutons de carousel -->
-    <div class="carousel-controls">
-      <button class="carousel-control-prev" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <div class="carousel-controls moncarousselcat">
+      <button class="carousel-control-prev moncarousselcatprev" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="precedent()" type="button">Précédent</button>
       </button>

@@ -61,17 +61,19 @@ if($key % 4 === 0) :
 <!-- ************************************************************************** -->
 
 <!-- Ajouter d'autres items pour le carrousel ici -->
-<!--ICI Mes boutons de carousel -->
-<div class="carousel-controls">
-<button class="carousel-control-prev" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span><strong>
-Précédent</strong>
-</button>
-<button class="carousel-control-next" id="carouselcatsuiv" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<strong>Suivant</strong>
-</button>
-</div>
+ <!-- ICI Mes boutons de carousel -->
+ <div class="carousel-controls">
+      <button class="carousel-control-prev" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="precedent()" type="button">Précédent</button>
+      </button>
+      <button class="carousel-control-next" id="carouselcatsuiv" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="btn btn-secondary bg-dark rounded-4 col-sm-1 espacebouton" onclick="suivant()" type="button">Suivant</button>
+      </button>
+    </div>
+
+  </div>
 </main>
 
 
