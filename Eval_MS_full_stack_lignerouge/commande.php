@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMMANDES V3</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="Lignerouge.css" rel="stylesheet">
+<!-- ICI MA PAGE COMMANDE.PHP-->
 
-
+<?php
+require_once ("php/header.php");
+require_once("database.php");
+?>
 
 <body style="background-color: #4A394a;">
  
-      <!--        Header     -->
-      <?php
-require_once ("php/header.php");
-?> 
 
         <main>
             <br>
@@ -30,8 +21,8 @@ require_once ("php/header.php");
                 </div>
                 <div class="col-md-6">
                   <div class="card-body">
-                    <h5 class="card-title"> BOUILLON DE NOUILLES & ÉMINCÉS DE BOEUF</h5>
-                    <p class="card-text">Ce plat est composé de...</p>
+                    <h5 class="card-title"> </h5>
+                    <p class="card-text"></p>
          
                   
 <div class="dropdown ">
