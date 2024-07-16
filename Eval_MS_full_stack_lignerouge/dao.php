@@ -92,14 +92,13 @@ function getCategories(){
 
 /*              POur le bouton commander de ma page plats.php et ma page commande        *************************************************             */
 
- // Fonction pour récupérer un plat par son ID
- function getPlatById($conn, $idPlat) {
-  $sql = "SELECT * FROM plats WHERE id = :idPlat";
-  $stmt = $conn->prepare($sql);
-  $stmt->bindParam(":idPlat", $idPlat);
+ // Fonction pour récupérer  les informations d'un platpar son ID
+ function getPlatById($conn, $id) {
+  $query = "SELECT * FROM plats WHERE id = :id";
+  $stmt = $conn->prepare($query);
+  $stmt->bindParam(":id", $id);
   $stmt->execute();
-  $plat = $stmt->fetch();
-  return $plat;
+  return $stmt->fetch();
 }
 
 /*                             *************************************************             */

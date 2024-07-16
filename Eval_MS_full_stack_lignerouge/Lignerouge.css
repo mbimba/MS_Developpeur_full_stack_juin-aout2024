@@ -250,3 +250,8 @@ span{
    
 }
 
+
+/*------------------------------------------Mon foooter-------------------------------------------------------- */
+.taille{
+  font-size: 0.8em;     /* Pour réduire la taille de texte "politique de confidentialité" et "mentions légales" */
+}
