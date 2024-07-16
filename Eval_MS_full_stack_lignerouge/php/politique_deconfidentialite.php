@@ -44,7 +44,7 @@
 
             <p>Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité, n'hésitez pas à nous contacter.</p>
 
-            <p>Adresse e-mail du responsable du traitement des données : <a href="mailto:example@example?come">example@example?come</a></p>
+            <p>Adresse e-mail du responsable du traitement des données : <a href="triomphe?come">triomphe?come</a></p>
         </div>
     </div>
 </div>
