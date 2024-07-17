@@ -1,16 +1,12 @@
+<?php include 'php/header.php';?>
 
-
-<!-- Header -->
-<header class="bg-dark py-5">
-    <div class="container">
-        <h1 class="text-white">Politique de confidentialité</h1>
-    </div>
-</header>
+<br><br>
 
 <!-- Container -->
 <div class="container py-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
+        <h1 class="text-white text-center">Politique de confidentialité</h1>
             <h2>Collecte des données</h2>
             <p>Nous collectons les données suivantes :</p>
             <ul>
@@ -49,9 +45,12 @@
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="bg-dark py-5">
+
     <div class="container">
         <p class="text-white">Copyright 2024 - Tous droits réservés</p>
     </div>
-</footer>
+
+
+
+<!--         ICI MON FOOTER OU PIED DE PAGE AVEC LES LOGOS    -->
+<?php include 'php/footer.php';?>

@@ -48,10 +48,10 @@
       <section style="margin-top: -20px;">  <!-- Section pour les textes -->
         <div class="row justify-content-center">
           <div class="col-md-3 text-center">
-            <p class="text-white taille"><a style="text-decoration: none; color: #FFFFFF;" href="php/politique_deconfidentialite.php">Politique de confidentialité</a></p>
+            <p class="text-white taille"><a style="text-decoration: none; color: #FFFFFF;" href="politique_deconfidentialite.php">Politique de confidentialité</a></p>
           </div>
           <div class="col-md-3 text-center">
-            <p class="text-black taille"><a style="text-decoration: none; color: #FFFFFF;" href="php/mentions_legales.php">Mentions légales</a></p>
+            <p class="text-black taille"><a style="text-decoration: none; color: #FFFFFF;" href="mentions_legales.php">Mentions légales</a></p>
           </div>
         </div>
       </section>

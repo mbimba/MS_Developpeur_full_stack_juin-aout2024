@@ -1,14 +1,13 @@
-<!-- Header -->
-<header class="bg-dark py-5">
-    <div class="container">
-        <h1 class="text-white">Mentions légales</h1>
-    </div>
-</header>
+<?php include 'php/header.php';?>
+
+ <br> <br>
+
 
 <!-- Container -->
 <div class="container py-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
+        <h1 class="text-white text-center">Mentions légales</h1>
             <h2>Éditeur du site</h2>
             <p>Le site web [nom du site web] est édité par [nom de l'éditeur], domicilié au [adresse de l'éditeur].</p>
 
@@ -26,14 +25,18 @@
 
             <p>Si vous avez des questions ou des préoccupations concernant ce site web, n'hésitez pas à nous contacter.</p>
 
-            <p>Adresse e-mail du responsable de la publication : <a href="mailto:example@example.com">example@example.com</a></p>
+            <p>Adresse e-mail du responsable de la publication :  <a href="trio?come">trio?come</a></p>
         </div>
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="bg-dark py-5">
+
     <div class="container">
-        <p class="text-white">Copyright 2023 - Tous droits réservés</p>
+        <p class="text-white">Copyright 2024 - Tous droits réservés</p>
     </div>
-</footer>
+
+
+
+<!--         ICI MON FOOTER OU PIED DE PAGE AVEC LES LOGOS    -->
+<?php include 'php/footer.php';?>
+ 

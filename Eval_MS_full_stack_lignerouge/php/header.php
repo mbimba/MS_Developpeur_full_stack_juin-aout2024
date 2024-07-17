@@ -42,7 +42,7 @@
       <!-- MA VIDEO + BARRE DE RECHERCHE  -->  
      
 <div class="image-container position-relative"> 
-<?php if (basename($_SERVER['SCRIPT_NAME']) != 'commande.php') { ?> /<!-- Code pour afficher le fond vidéo: Ajout de la condition pour ne pas afficher la vidéo sur la page de commande -->
+<?php if (basename($_SERVER['SCRIPT_NAME']) != 'commande.php' && basename($_SERVER['SCRIPT_NAME'])!= 'politique_deconfidentialite.php' && basename($_SERVER['SCRIPT_NAME'])!= 'mentions_legales.php') { ?> /<!-- Code pour afficher le fond vidéo: Ajout de la condition pour ne pas afficher la vidéo sur les pages de commande, politique de confidentialité et mentions légales -->
   <div class="row g-0"> 
 
     <video id="video" class="col-12 mb-0 mt-0" src="images_the_district/11659-231758756_small.mp4" style="width:100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
