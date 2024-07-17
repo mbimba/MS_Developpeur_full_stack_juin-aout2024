@@ -40,13 +40,15 @@
       <?php  echo "<script> console.log('".$_SERVER['REQUEST_URI']."')</script>" ;?>
 
       <!-- MA VIDEO + BARRE DE RECHERCHE  -->  
+     
 <div class="image-container position-relative"> 
-
+<?php if (basename($_SERVER['SCRIPT_NAME']) != 'commande.php') { ?> /<!-- Code pour afficher le fond vidéo: Ajout de la condition pour ne pas afficher la vidéo sur la page de commande -->
   <div class="row g-0"> 
 
     <video id="video" class="col-12" src="images_the_district/11659-231758756_small.mp4" style="width:100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
+ </div>
 
-  </div>
+ <?php } ?> <!-- Fin php interdiction d'afficher video sur page commande  -->  
 
   <?php if ($_SERVER['REQUEST_URI'] == "/index.php") { ?>     <!-- Le php permet d'afficher la barre de recherche uniquement sur la page d'accueil qui est index.php --> 
 
@@ -64,7 +66,7 @@
 
     </div>
 
-  <?php } ?>
+  <?php } ?><!-- Fin php affichage barre de recherche uniquement sur index.php -->  
 
 </div>
     </header>
