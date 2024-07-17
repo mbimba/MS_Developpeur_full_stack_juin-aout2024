@@ -227,10 +227,16 @@ span{
 
 .parallax2 {
 
-  margin-top: -20px; /* ajuster la valeur pour qu'elle corresponde à la hauteur de la vidéo */
+  margin-top: -100vh; /* Hauteur de la vidéo de fond */
 
-  padding-top: 0;
+  padding-top: 100vh; /* Hauteur de la vidéo de fond */
 
+  background-attachment: fixed;
+
+  background-size: cover;
+
+  background-position: center;
+  padding-bottom: 50px; /* Ajout d'un espace de 50px entre le formulaire et le footer */
 }
 
 

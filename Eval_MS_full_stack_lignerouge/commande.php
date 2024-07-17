@@ -28,7 +28,7 @@ $plat = getPlatById($conn, $idPlat);
 
   <h1 class="text-center">Ma commande</h1><br>
 
-  <div class="container row d-flex justify-content-evenly mx-auto p-2" style="background-color: #4A394a;">
+  <div class="container row d-flex justify-content-evenly mx-auto p-2 " style="background-color: #4A394a;">
     <!-- Bloc de cards -->
 
     <div class="card mb-3 bg-primary col-6" style="max-width: 540px;">
@@ -88,7 +88,7 @@ $plat = getPlatById($conn, $idPlat);
 
   <!-- Formulaire de commande -->
 
-  <div class="container mt-5 pt-5">
+  <div class="container pt-0"> <!-- pt-o pour supprimer l'espace entre le formulaire et le bloc bleu au dessus -->
 
     <form class="row g-3 bordure" novalidate action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 
