@@ -16,16 +16,8 @@ if (isset($_GET['id'])) {
 $categorie = getCategoryById($conn, $idCategorie);
 ?>
 
-<body style="background-color: #4A394a;">
 
-<!-- Header -->
-<header class="position-relative">
-  <div class="container-fluid">
-    <div class="row g-0">
-      <video id="video" class="col-12" src="images_the_district/11659-231758756_small.mp4" style="width:100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
-    </div>
-  </div>
-</header>
+<!-- ************************************** MON BODY ***************************************************** -->
 
 <main class="container-fluid mt-3 pt-5">
   <div class="row justify-content-center">

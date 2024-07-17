@@ -20,17 +20,15 @@ $plat = getPlatById($conn, $idPlat);
 
 ?>
 
-
-<body style="background-color: #4A394a;">
+<!-- ************************************** MON BODY ***************************************************** -->
 
 <main>
 
   <br>
 
-  <h1 class="text-center"></h1><br>
+  <h1 class="text-center">Commande</h1><br>
 
   <div class="container row d-flex justify-content-evenly mx-auto p-2" style="background-color: #4A394a;">
-
     <!-- Bloc de cards -->
 
     <div class="card mb-3 bg-primary col-6" style="max-width: 540px;">

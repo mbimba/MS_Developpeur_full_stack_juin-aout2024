@@ -1,41 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT V3</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="Lignerouge.css" rel="stylesheet">
 
-
-    <body style="background-color: #4A394a;">
-   
-
-    <!--     Header        SANS L'ONGLET DE RECHERCHE      -->
-    <?php
+<?php
 require_once ("php/header.php");
   ?>
 
 
-
+<!-- ************************************** MON BODY ***************************************************** -->
       <div class="parallax2">       <!--         DEBUT PARALLAX2    -->
 
-      <div class="image-container position-relative"> <!--        ICI MON MA VIDEO DE FOND SANS L'ONGLET DE RECHERCHE    -->
-        <div class="row g-0"> <!--Ici mon image de fond -->
-      
-          <!-- <div class="image-container">   Ici mon image de fond 
-                                                                            <img class="img-fluid " src="Mesimages/imagedefond2a.avif" height="auto" width="100%" position="relative">
-                                                                          </div>-->
-      
-          <video id="video" class="col-12" src="images_the_district/11659-231758756_small.mp4"
-            style="width:100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
-        </div>
-      
-        
-      
-      </div>
-    
 <main >
 
     <div class="container mt-5 pt-5 containercontact" position="relative"> <!-- Mon formulaire contact    pt-5 pour appliquer une marge au dessus--> 

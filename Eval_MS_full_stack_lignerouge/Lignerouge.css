@@ -1,5 +1,5 @@
 
-/* ----------------------------------Page accueil ---------------------------------------------------------------------*/
+/* ----------------------------------Page accueil: index.php ---------------------------------------------------------------------*/
 .espace {
   margin: 0 15px;        /* Pour créer de l'espace entre les éléments du menu "entete" partie nav */
 
@@ -22,6 +22,9 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+
+
 
 
 video{        /* La vidéo prend toute la largeur de la page */
@@ -134,7 +137,7 @@ video{        /* La vidéo prend toute la largeur de la page */
 
 
 
-/*------------------------------------------DEBUT Page TOUS LES PLATS -------------------------------------------------------- */
+/*------------------------------------------PAGE PLATS.PHP -------------------------------------------------------- */
 
 .tailletitreplat{
 font-size:larger;
@@ -159,7 +162,7 @@ font-size:larger;
   text-align: center;
 }
 
-/*------------------------------------------PAGE PLATS.PHP -------------------------------------------------------- */
+
 
 
 

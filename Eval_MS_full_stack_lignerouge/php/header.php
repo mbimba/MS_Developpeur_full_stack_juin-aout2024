@@ -8,7 +8,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="Lignerouge.css" rel="stylesheet">
 </head>
-<body>
+<body  style="background-color: #4A394a;">
     
 <header>
       <!--        NAVBAR ENTETE         SANS L'ONGLET DE RECHERCHE      -->
@@ -39,6 +39,34 @@
 
       <?php  echo "<script> console.log('".$_SERVER['REQUEST_URI']."')</script>" ;?>
 
+      <!-- MA VIDEO + BARRE DE RECHERCHE  -->  
+<div class="image-container position-relative"> 
+
+  <div class="row g-0"> 
+
+    <video id="video" class="col-12" src="images_the_district/11659-231758756_small.mp4" style="width:100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
+
+  </div>
+
+  <?php if ($_SERVER['REQUEST_URI'] == "/index.php") { ?>     <!-- Le php permet d'afficher la barre de recherche uniquement sur la page d'accueil qui est index.php --> 
+
+    <!-- Mon onglet recherche -->
+
+    <div class="barrerecherche">
+
+      <form class="d-flex">
+
+        <input class="form-control mr-sm-2" type="search" id="maRecherche" name="" placeholder="search" />
+
+        <button type="submit" class="rounded-5" style="color: #4f48b1;">Recherche</button>
+
+      </form> 
+
+    </div>
+
+  <?php } ?>
+
+</div>
     </header>
 
 
