@@ -162,6 +162,10 @@ font-size:larger;
   text-align: center;
 }
 
+.h5couleurcat{            /* Pour donner un contour au texte du h5 */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
 
 
 
@@ -212,46 +216,24 @@ span{
   
 }
 
+.image-container {
 
+  padding: 0;
 
-/*------------------------------------------FIN Page contact  -------------------------------------------------------- */
-
-
-
-
-/*------------------------------------------ Page Plats par catégorie  -------------------------------------------------------- */
-.zoomimage2 img:hover{                       /* Pour créer l'effet zoom sur les images de la page  */
-  
-
-    transform: scale(1.5);
-    transition: 0.4s;
-    width: auto;
-
-    }
-  
-
-    .zoomimage2 {                       /* Nous utilisons la propriété CSS 'position : relative;' pour nous assurer que l'image reste dans le cadre défini par son élément parent.  */
-  
-
-      position : relative;
-      overflow : hidden;
-      transition : 0.5s;
-  
-      }
-    
-.h5couleurcat{            /* Pour donner un contour au texte du h5 */
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: black;
+  margin: 0;
+  position: relative;
 }
 
 
-/*------------------------------------------Toutes les Pages Plats par catégorie -------------------------------------------------------- */
+.parallax2 {
 
-.boutonsuivetprec{
-  border-radius: 30px;
-  margin: 0 45px;      /* Pour créer de l'espace entre les boutons "précédent" et "suivant"*/
-   
+  margin-top: -20px; /* ajuster la valeur pour qu'elle corresponde à la hauteur de la vidéo */
+
+  padding-top: 0;
+
 }
+
+
 
 
 /*------------------------------------------Mon foooter-------------------------------------------------------- */

@@ -26,7 +26,7 @@ $plat = getPlatById($conn, $idPlat);
 
   <br>
 
-  <h1 class="text-center">Commande</h1><br>
+  <h1 class="text-center">Ma commande</h1><br>
 
   <div class="container row d-flex justify-content-evenly mx-auto p-2" style="background-color: #4A394a;">
     <!-- Bloc de cards -->
