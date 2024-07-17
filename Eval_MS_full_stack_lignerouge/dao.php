@@ -94,7 +94,7 @@ function getCategories(){
 
  // Fonction pour récupérer  les informations d'un platpar son ID
  function getPlatById($conn, $id) {
-  $query = "SELECT * FROM plats WHERE id = :id";
+  $query = "SELECT * FROM plat WHERE id = :id";
   $stmt = $conn->prepare($query);
   $stmt->bindParam(":id", $id);
   $stmt->execute();
