@@ -14,11 +14,23 @@ $idPlat = $_GET['id'];
 // Récupération des informations du plat commandé
 
 $plat = getPlatById($conn, $idPlat);
-
-
 // Affichage des informations du plat commandé
 
+
+
+
+//**************************************************   FONCTION POUR MA PAGE COMMANDE: MAILER  **************************    */
+// selon la situation et ta logique de code: 
+// ici on appele la fonction envoi_mail()
+
+
+
+
 ?>
+
+
+
+
 
 <!-- ************************************** MON BODY ***************************************************** -->
 
