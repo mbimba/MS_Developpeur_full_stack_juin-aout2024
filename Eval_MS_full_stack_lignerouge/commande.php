@@ -21,12 +21,105 @@ $plat = getPlatById($conn, $idPlat);
 
 //**************************************************   FONCTION POUR MA PAGE COMMANDE: MAILER  **************************    */
 // selon la situation et ta logique de code: 
-// ici on appele la fonction envoi_mail()
+// ici j'appelle la fonction envoi_mail()
+
+// J'inclus la bibliothèque PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'vendor/autoload.php'; // Composer autoloader
+
+// Configuration de l'email
+$mail = new PHPMailer(true);
+
+// On va utiliser le SMTP
+$mail->isSMTP();
+
+// Serveur SMTP
+
+$mail->SMTPDebug = 0; // Débogage SMTP (0 pour production: avec cette valeur, les erreurs SMTP ne seront pas affichées.)    $mail->SMTPDebugest une propriété de l'objet PHPMailer qui permis de définir le niveau de débogage pour les erreurs SMTP (Simple Mail Transfer Protocol).
 
 
 
+// On configure l'adresse du serveur SMTP
+$mail->Host       = 'localhost';    
 
-?>
+// On désactive l'authentification SMTP
+
+$mail->SMTPAuth   = false; 
+
+// On configure le port SMTP (MailHog)
+$mail->Port       = 1025;  
+
+// Expéditeur du mail - adresse mail + nom (facultatif)
+
+$mail->setFrom('from@thedistrict.com', 'The District');
+
+// Récupérez les informations de la commande
+
+$nom_client = $_POST['nomprenom'];
+
+$email_client = $_POST['mail'];
+
+$adresse_client = $_POST['adresse'];
+
+// Destinataire(s) - adresse et nom (facultatif)
+
+$mail->addAddress($email_client, $nom_client);
+
+//Adresse de reply (facultatif)
+
+$mail->addReplyTo("reply@thedistrict.com", "Reply");
+
+// On précise si l'on veut envoyer un email sous format HTML 
+
+$mail->isHTML(true);
+
+// Sujet du mail
+$mail->Subject = 'Confirmation de votre commande';
+
+// Corps du message
+
+$mail->Body = "<h2>Votre commande chez Le District</h2>
+
+              <p>Cher $nom_client,</p>
+
+              <p>Nous avons bien reçu votre commande. Voici les détails :</p>
+
+              <p>Plat commandé : $libelle</p>
+
+              <p>Quantité : $quantite</p>
+
+              <p>Prix total : $total</p>
+
+              <p>Adresse de livraison : $adresse_client</p>
+
+              <p>Merci pour votre commande. Nous vous contactons rapidement pour confirmer la livraison.</p>";
+
+
+// On envoie le mail dans un block try/catch pour capturer les éventuelles erreurs
+
+if ($mail){
+
+    try {
+
+        $mail->send();
+
+        echo 'Email envoyé avec succès';
+
+        } catch (Exception $e) {
+
+        echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mail->ErrorInfo;
+
+        }
+
+    }
+
+
+    ?>
+
+
+
 
 
 
