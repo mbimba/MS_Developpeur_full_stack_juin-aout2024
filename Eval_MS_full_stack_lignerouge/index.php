@@ -12,13 +12,14 @@ require_once("database.php");
 
   <main> 
     <div class="container-fluid mt-3 pt-5 card text-center w-75 bg-dark" > 
+    <h1 class="" style="color:EE82EE">NOS CATÉGORIES DE PLATS POPULAIRES</h1>
       <div class="row "> 
         <?php
         $categories = get_categories($conn, 3);
         foreach ($categories as $categorie) {
           echo '<div class="col-sm-4 p-3 bg-dark text-white zoomimage">
             <div class="img-fluid ">
-              <h1>' . $categorie['libelle'] . '</h1>
+              <h2>' . $categorie['libelle'] . '</h2>
               <a href="plats.php?id=' . $categorie['id'] . '">
                 <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . $categorie['image'] . '" alt="'.$category['libelle'].'">
               </a>
@@ -37,7 +38,7 @@ require_once("database.php");
         foreach ($categories as $categorie) {
           echo '<div class="col-sm-4 p-3 bg-secondary text-white zoomimage">
             <div class="img-fluid ">
-              <h1>' . $categorie['libelle'] . '</h1>
+              <h2>' . $categorie['libelle'] . '</h2>
               <a href="plats.php?id=' . $categorie['id'] . '">
                 <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . $categorie['image'] . '" alt="">
               </a>
@@ -51,6 +52,7 @@ require_once("database.php");
     <!-- ICI LES 3 PLATS SUR LA PAGE ACCUEIL -->
     <div class="container-fluid mt-3 pt-5 card text-center w-75 img-fluid bg-dark"> 
       <div class="row ">
+        <h1 class="" style="color:EE82EE">LES PLATS LES PLUS VENDUS</h1>
         <?php
         $plats = get_best_sellers($conn, 3);
         foreach ($plats as $plat) {
