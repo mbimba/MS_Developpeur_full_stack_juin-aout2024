@@ -15,14 +15,14 @@ require_once("database.php");
     <h1 class="" style="color:EE82EE">NOS CATÉGORIES DE PLATS POPULAIRES</h1>
       <div class="row "> 
         <?php
-        $categories = get_categories($conn, 3);
+        $categories = get_categories($conn, 3);             //La fonction htmlspecialchars() en PHP est utilisée pour convertir les caractères spéciaux en entités HTML. Cela permet d'afficher du texte dans une page web sans que le texte soit interprété comme du code HTML.
         foreach ($categories as $categorie) {
           echo '<div class="col-sm-4 p-3 bg-dark text-white zoomimage">
             <div class="img-fluid ">
-              <h2>' . $categorie['libelle'] . '</h2>
-              <a href="plats.php?id=' . $categorie['id'] . '">
-                <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . $categorie['image'] . '" alt="'.$category['libelle'].'">
-              </a>
+              <h2>' . htmlspecialchars($categorie['libelle']) . '</h2>     
+                    <a href="plats.php?id=' . htmlspecialchars($categorie['id']) . '">
+                        <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . htmlspecialchars($categorie['image']) . '" alt="' . htmlspecialchars($categorie['libelle']) . '">
+                    </a>
             </div>
           </div>';
         }
@@ -38,10 +38,10 @@ require_once("database.php");
         foreach ($categories as $categorie) {
           echo '<div class="col-sm-4 p-3 bg-secondary text-white zoomimage">
             <div class="img-fluid ">
-              <h2>' . $categorie['libelle'] . '</h2>
-              <a href="plats.php?id=' . $categorie['id'] . '">
-                <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . $categorie['image'] . '" alt="">
-              </a>
+             <h2>' . htmlspecialchars($categorie['libelle']) . '</h2>
+                    <a href="plats.php?id=' . htmlspecialchars($categorie['id']) . '">
+                        <img class="rounded-circle mx-auto d-block border border border-black-1" src="images_the_district/category/' . htmlspecialchars($categorie['image']) . '" alt="">
+                    </a>
             </div>
           </div>';
         }
@@ -57,7 +57,7 @@ require_once("database.php");
         $plats = get_best_sellers($conn, 3);
         foreach ($plats as $plat) {
           echo '<div class="col-sm-4 p-3 bg-dark text-white">
-            <img class="rounded-2 mx-auto d-block border border-black-1" src="Mesimages/' . $plat['image'] . '" width="50%" height="80%" alt="">
+          <img class="rounded-2 mx-auto d-block border border-black-1" src="Mesimages/' . htmlspecialchars($plat['image']) . '" width="50%" height="80%" alt="">
           </div>';
         }
         ?>

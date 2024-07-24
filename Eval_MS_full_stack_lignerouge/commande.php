@@ -29,32 +29,31 @@ $plat = getPlatById($conn, $idPlat);
 
             <!-- Bloc de cards (déplacé ici) -->
             <div class="card mb-3 bg-primary col-md-8 col-lg-6 mx-auto">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="Mesimages/<?php echo $plat['image'];?>" class="img-fluid rounded-pill" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $plat['libelle'];?></h5>
-                            <p class="card-text"><?php echo $plat['description'];?></p>
-                            <!-- Dropdown pour choisir la quantité -->
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-primary text-body btnquantite">Quantité</button>
-                                <select class="custom-select text-body btnselectcommande" id="validationCustom04" required>
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                            <p class="card-text">Prix : <?php echo $plat['prix'];?> €</p>
-                        </div>
-                    </div>
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="Mesimages/<?php echo $plat['image']; ?>" class="img-fluid rounded-pill" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $plat['libelle']; ?></h5>
+                <p class="card-text"><?php echo $plat['description']; ?></p>
+                <!-- Dropdown pour choisir la quantité -->
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary text-body btnquantite">Quantité</button>
+                    <select class="custom-select text-body btnselectcommande" id="validationCustom04" name="quantite" required>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
                 </div>
+                <p class="card-text">Prix : <?php echo $plat['prix']; ?> €</p>
             </div>
-
+        </div>
+    </div>
+</div>
             <!-- Champs du formulaire -->
             <div class="col-md-12">
                 <label for="nomprenom" class="form-label"><strong>Nom et prénom</strong></label>
@@ -100,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail = $_POST['mail'];
     $phone2 = $_POST['phone2'];
     $adresse = $_POST['adresse'];
-    $quantite = 1;
+    $quantite = $_POST['quantite'];
     $total = $plat['prix'] * $quantite;
     $email_sent = envoi_mail($nomprenom, $mail, $adresse, $plat['libelle'], $quantite, $total);
     if ($email_sent) {

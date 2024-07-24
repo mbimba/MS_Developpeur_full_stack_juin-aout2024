@@ -98,7 +98,8 @@ function getCategories(){
   $stmt = $conn->prepare($query);
   $stmt->bindParam(":id", $id);
   $stmt->execute();
-  return $stmt->fetch(PDO::FETCH_ASSOC);
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  return $result ? $result : []; // Retourne un tableau vide si la requête échoue
 }
 
 /*                             *************************************************             */
