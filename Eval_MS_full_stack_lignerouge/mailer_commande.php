@@ -60,7 +60,7 @@ function envoi_mail($nomprenom, $mail, $adresse, $libelle, $quantite, $total) {
     try {
         //$mail = new PHPMailer(true);
         $mailer->send();
-        echo "Mail envoyé avec succès";
+        echo "Mail envoyé avec succès. ";
         return true;
     } catch (Exception $e) {
         echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mailer->ErrorInfo;
