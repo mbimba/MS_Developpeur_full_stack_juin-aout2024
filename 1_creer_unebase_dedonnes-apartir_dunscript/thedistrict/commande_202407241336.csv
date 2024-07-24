@@ -1,0 +1,12 @@
+"id","id_plat","quantite","total","date_commande","etat","nom_client","telephone_client","email_client","adresse_client"
+7,10,2,8.00,2021-07-20 06:40:21.000,En cours de livraison,Claudia Hedley,"7451114400",hedley@gmail.com,"1119 Kinney Street"
+8,14,1,6.00,2021-07-20 06:40:57.000,En préparation,Vernon Vargas,"7414744440",venno@gmail.com,"1234 Hazelwood Avenue"
+9,9,4,20.00,2021-07-20 07:06:06.000,Annulée,Carlos Grayson,"7401456980",carlos@gmail.com,"2969 Hartland Avenue"
+16,4,4,16.00,2020-11-30 03:52:43.000,Livrée,Kelly Dillard,"7896547800",kelly@gmail.com,"308 Post Avenue"
+17,5,2,20.00,2020-11-30 04:07:17.000,Livrée,Thomas Gilchrist,"7410001450",thom@gmail.com,"1277 Sunburst Drive"
+18,5,10,100.00,2021-05-04 01:35:34.000,Livrée,Martha Woods,"78540001200",martha@gmail.com,"478 Avenue Street"
+19,9,1,7.00,2021-07-20 06:10:37.000,Livrée,Charlie,"7458965550",charlie@gmail.com,"3140 Bartlett Avenue"
+20,16,4,12.00,2021-07-20 07:11:06.000,Livrée,Jonathan Caudill,"7410256996",jonathan@gmail.com,Limer Street
+21,15,20,160.00,2021-07-20 07:06:12.000,Livrée,Bob Morane,"0123456789",bob@miam.plouf,"1 rue pas là"
+22,15,30,240.00,2024-05-04 01:35:34.000,Livrée,Triomphe Mbimba,"0123456789",Triomphe_the_One@Triomphe.moi,"123 t'es pas là"
+23,13,100,700.00,2024-05-04 01:35:35.000,Livrée,Clark Kent,"0555555555",super_truc@man.man,"3140 metropolis road"
