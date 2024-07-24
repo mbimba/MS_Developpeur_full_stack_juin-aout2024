@@ -4,10 +4,10 @@ require_once("database.php");
 
 /* manu */
 // Récupération de l'ID du plat commandé  
-//$idPlat = $_GET['id'];
+$idPlat = $_GET['id'];
 
 // Récupération des informations du plat commandé
-$plat = getPlatById($conn, 16); //$idPlat);
+$plat = getPlatById($conn, $idPlat);
 
 // Affichage des informations du plat commandé
 
