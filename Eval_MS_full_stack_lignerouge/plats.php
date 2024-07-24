@@ -26,8 +26,10 @@ if (isset($_GET['id'])) {
 
 }
 
-$categorie = getCategoryById($conn, $idCategorie);
+if (isset($_GET['id'])) {
 
+$categorie = getCategoryById($conn, $idCategorie);
+}
 ?>
 
 
@@ -81,7 +83,7 @@ $categorie = getCategoryById($conn, $idCategorie);
                                     <h5 class="card-title tailletitreplat"><?php echo $plat['libelle'];?></h5>
 
                                     <p class="card-text tailledescriplat"><?php echo $plat['description'];?></p>
-                                    <p class="card-text tailledescriplat">Quantité : <?php echo $plat['quantité'];?></p>
+                                    <p class="card-text tailledescriplat">Quantité :</p>
                                     <p class="card-text tailledescriplat">Prix : <?php echo $plat['prix'];?> €</p>
 
                                     <a href="commande.php?id=<?php echo $plat['id'];?>" class="btn btn-primary tailletextcommand">Commander</a>
