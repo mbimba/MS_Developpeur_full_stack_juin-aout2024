@@ -96,10 +96,9 @@ function getCategories(){
  function getPlatById($conn, $id) {
   $query = "SELECT * FROM plat WHERE id = :id";
   $stmt = $conn->prepare($query);
-  $stmt->bindParam(":id", $id);
+  $stmt->bindParam(":id", $id, PDO::PARAM_INT);
   $stmt->execute();
-  $result = $stmt->fetch(PDO::FETCH_ASSOC);
-  return $result ? $result : []; // Retourne un tableau vide si la requête échoue
+  return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
 /*                             *************************************************             */

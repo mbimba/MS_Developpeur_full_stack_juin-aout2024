@@ -3,8 +3,12 @@ require_once ("php/header.php");
 require_once("database.php");
 
 /* manu */
-// Récupération de l'ID du plat commandé 
-$idPlat = $_GET['id'];
+// Récupération de l'ID du plat commandé
+if(isset($_GET['id'])){         // Si la variable ID n'existe pas, cherche dans le POST
+  $idPlat = $_GET['id'];
+} else {
+  $idPlat = $_POST['id'];
+}
 
 // Récupération des informations du plat commandé
 $plat = getPlatById($conn, $idPlat);
@@ -19,13 +23,20 @@ $plat = getPlatById($conn, $idPlat);
 
 <br>
 
-<h1 class="text-center">Ma commande</h1><br> <!-- Vérifiez si ce texte s'affiche -->
+<h1 class="text-center mt-5">Ma commande</h1><br> <!-- Vérifiez si ce texte s'affiche -->
 
 <div class="container" style="background-color: #4A394a;">
     <!-- Formulaire de commande -->
     <div class="container pt-0"> <!-- pt-0 pour supprimer l'espace entre le formulaire et le bloc bleu au dessus -->
 
         <form class="row g-3 bordure" novalidate action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+       <?php
+        if(isset($_GET['id'])){        // Si la variable ID n'existe pas, cherche dans le POST
+            echo "<input type='hidden' name='id' value='".$_GET['id']."'>";
+          } else {
+            echo "<input type='hidden' name='id' value='".$_POST['id']."'>";
+          }
+?>
 
             <!-- Bloc de cards (déplacé ici) -->
             <div class="card mb-3 bg-primary col-md-8 col-lg-6 mx-auto">
@@ -94,6 +105,7 @@ $plat = getPlatById($conn, $idPlat);
 <?php
 require_once("mailer_commande.php");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $currentDate = Date("d-m-Y");
     // Traitement des données du formulaire
     $nomprenom = $_POST['nomprenom'];
     $mail = $_POST['mail'];
