@@ -3,13 +3,13 @@
 
 <?php
 
-// function search_plats($conn, $search_query) {
-//     $sql = "SELECT * FROM plat WHERE libelle LIKE :search_query"; 
-//     $stmt = $conn->prepare($sql);
-//     $stmt->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
-//     $stmt->execute();
-//     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-// }
+ function search_plats($conn, $search_query) {
+     $sql = "SELECT * FROM plat WHERE libelle LIKE :search_query"; 
+     $stmt = $conn->prepare($sql);
+     $stmt->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
+     $stmt->execute();
+     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+ }
 
 
 
