@@ -70,11 +70,11 @@ $categorie = getCategoryById($conn, $idCategorie);
                         <?php endif;?>
 
 
-                            <div class="col-sm-3 p-3 bg-dark text-white">
+                            <div class="col-sm-3 p-3 bg-dark text-white mx-auto">
 
                                 <div class="d-flex justify-content-center align-items-center">
 
-                                    <img class="rounded-circle mw-100 mh-100" src="Mesimages/<?php echo $plat['image'];?>" alt="...">
+                                    <img class="rounded-circle mw-100 mh-100 mx-auto d-block" src="Mesimages/<?php echo $plat['image'];?>" alt="...">
 
                                 </div>
 
