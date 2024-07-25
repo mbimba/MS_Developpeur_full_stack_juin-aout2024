@@ -76,7 +76,7 @@ $best_sellers = get_best_sellers($conn, 3); // Récupère les 3 plats les plus v
             <!-- Section des catégories (affichée uniquement si aucune recherche n'est effectuée) -->
             <?php if ($show_categories): ?>
                 <div class="container-fluid mt-3 pt-5 card text-center w-75 bg-dark">
-                    <h1 class="text-light" style="color: #EE82EE">NOS CATÉGORIES DE PLATS POPULAIRES</h1>
+                    <h1 class="text" style="color: #EE82EE">NOS CATÉGORIES DE PLATS POPULAIRES</h1>
                     <div class="row">
                         <?php
                         foreach ($categories_first_set as $categorie) {
@@ -115,7 +115,7 @@ $best_sellers = get_best_sellers($conn, 3); // Récupère les 3 plats les plus v
             <!-- Section des plats les plus vendus (affichée uniquement si aucune recherche n'est effectuée) -->
             <?php if ($show_best_sellers): ?>
                 <div class="container-fluid mt-3 pt-5 card text-center w-75 bg-dark">
-                    <h1 class="text-light" style="color: #EE82EE">LES PLATS LES PLUS VENDUS</h1>
+                    <h1 class="text" style="color: #EE82EE">LES PLATS LES PLUS VENDUS</h1>
                     <div class="row">
                         <?php foreach ($best_sellers as $plat): ?>
                             <div class="col-sm-4 p-3 bg-dark text-white">
