@@ -37,16 +37,34 @@ $best_sellers = get_best_sellers($conn, 3); // Récupère les 3 plats les plus v
             <!-- Résultats de la recherche -->
             <?php if (!empty($plats)): ?>
                 <div class="container mt-3">
-                    <h2 class="text-light">Voici votre recherche : "<?php echo htmlspecialchars($search_query); ?>"</h2>
-                    <div class="row">
+                    <h2 class="text-light">Voici votre plat : "<?php echo htmlspecialchars($search_query); ?>"</h2>
+                    <div class="row justify-content-center">
                         <?php foreach ($plats as $plat): ?>
-                            <div class="col-sm-4 p-3 bg-dark text-white">
-                                <img class="rounded-2 mx-auto d-block border border-black-1" src="Mesimages/<?php echo htmlspecialchars($plat['image']); ?>" width="50%" height="80%" alt="">
-                                <h3><?php echo htmlspecialchars($plat['libelle']); ?></h3>
-                                <p><?php echo htmlspecialchars($plat['description']); ?></p>
-                                <p>Prix: <?php echo htmlspecialchars($plat['prix']); ?> €</p>
-                            </div>
-                        <?php endforeach; ?>
+                            <div class="col-md-3 p-3 bg-dark text-white">
+
+            <div class="d-flex justify-content-center align-items-center">
+
+                <img class="rounded-circle mw-100 mh-100" src="Mesimages/<?php echo $plat['image'];?>" alt="...">
+
+            </div>
+
+            <div class="card-body">
+
+                <h5 class="card-title"><?php echo $plat['libelle'];?></h5>
+
+                <p class="card-text"><?php echo $plat['description'];?></p>
+
+                <p class="card-text">Prix : <?php echo $plat['prix'];?> €</p>
+
+                <!-- Bouton Commander -->
+
+                <a href="commande.php?id=<?php echo $plat['id'];?>" class="btn btn-primary">Commander</a>
+
+            </div>
+
+        </div>
+
+    <?php endforeach; ?>
                     </div>
                 </div>
             <?php elseif ($search_query !== ''): ?>
