@@ -56,9 +56,9 @@
 
     <div class="barrerecherche">
 
-      <form class="d-flex">
+      <form class="d-flex search-form" action="index.php" method="get">
 
-        <input class="form-control mr-sm-2" type="search" id="maRecherche" name="" placeholder="search" />
+        <input class="form-control mr-sm-2" type="text" id="maRecherche" name="search_query" placeholder="search" required />
 
         <button type="submit" class="rounded-5" style="color: #4f48b1;">Recherche</button>
 

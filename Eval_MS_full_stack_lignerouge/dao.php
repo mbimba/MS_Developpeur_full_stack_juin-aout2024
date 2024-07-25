@@ -3,6 +3,18 @@
 
 <?php
 
+// function search_plats($conn, $search_query) {
+//     $sql = "SELECT * FROM plat WHERE libelle LIKE :search_query"; 
+//     $stmt = $conn->prepare($sql);
+//     $stmt->bindValue(':search_query', '%' . $search_query . '%', PDO::PARAM_STR);
+//     $stmt->execute();
+//     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+// }
+
+
+
+
+
 // Fonction pour récupérer les catégories de la base de données
 function get_categories($conn, $limit = null, $offset = null) {
     // Requête SQL pour sélectionner toutes les catégories
@@ -103,22 +115,7 @@ function getCategories(){
 
 /*                             *************************************************             */
 
-// Fonction pour récupérer les plats associés à la catégorie: PASTA
 
-
-
-
-
-/*                             *************************************************             */
-
-// Fonction pour récupérer les plats associés à la catégorie: SANDWICH
-
-
-
-
-/*                             *************************************************             */
-
-// Fonction pour récupérer les plats associés à la catégorie: ASIAN
 
 
 
