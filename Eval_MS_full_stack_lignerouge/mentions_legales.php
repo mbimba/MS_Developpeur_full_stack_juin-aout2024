@@ -9,10 +9,10 @@
         <div class="col-md-8 offset-md-2">
         <h1 class="text-white text-center">Mentions légales</h1>
             <h2>Éditeur du site</h2>
-            <p>Le site web [nom du site web] est édité par [nom de l'éditeur], domicilié au [adresse de l'éditeur].</p>
+            <p>Le site web [Triresto] est édité par [Triomphe], domicilié au [Rue de sans Faim, 00000 Aucuneville].</p>
 
             <h2>Hébergeur du site</h2>
-            <p>L'hébergeur du site web est [nom de l'hébergeur], domicilié au [adresse de l'hébergeur].</p>
+            <p>L'hébergeur du site web est [DUPONT prénom], domicilié au [CanaFrance].</p>
 
             <h2>Responsable de la publication</h2>
             <p>Le responsable de la publication est [nom du responsable de la publication], domicilié au [adresse du responsable de la publication].</p>
