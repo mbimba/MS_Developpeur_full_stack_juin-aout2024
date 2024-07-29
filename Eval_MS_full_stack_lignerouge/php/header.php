@@ -28,8 +28,8 @@
             </li>
             <li class="nav-item col-sm-4 ">   <!-- Lien vers touslesplats.php avec la classe "active" si la page actuelle est touslesplats.php -->
             <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], "/plats.php") !== false) {echo "active";}?> espace" href="plats.php">Plat</a> <!-- // Vérifie si la chaîne de caractères "/plats.php" est présente dans l'URI actuelle.
-// strpos retourne la position de la première occurrence de la sous-chaîne, ou false si elle n'est pas trouvée.
-// En utilisant !== false, on s'assure que la sous-chaîne a été trouvée (car strpos pourrait retourner 0 si la sous-chaîne est au début de l'URI). -->
+// La fonction strpos peut retourner un nombre (position de la sous-chaîne) ou false (si la sous-chaîne n'est pas trouvée).
+// En utilisant !== false, on vérifie que strpos a trouvé la sous-chaîne, car 0 est une position valide (début de la chaîne), tandis que false indique que la sous-chaîne n'a pas été trouvée. -->
             </li>
             <li class="nav-item col-sm-4 "> <!-- Lien vers contact.php avec la classe "active" si la page actuelle est contact.php -->
               <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == "/contact.php") {echo "active";}?>  espace " href="contact.php">Contact</a>
