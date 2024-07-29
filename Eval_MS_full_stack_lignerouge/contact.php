@@ -68,7 +68,7 @@ $demande = $_POST['demande'];
 
 $date= date ('Y-m-d-H-i-s');
 //$filename = $date->format('Y-m-d-H-i-s') . '.txt';            // d= le jour, m= le mois  y= l'année H= heure    i=minutes   s=secondes
-$filename = $date . '.txt';  
+$filename = $date . ' contact.txt';  
 
 $currentDateTime = new DateTime('now');   // pour mon echo après l'envoi du formulaire: date envoi du formulaire
 $currentDate = $currentDateTime->format('l, F j, Y H:i:s');          // pour mon echo après l'envoi du formulaire: date envoi du formulaire
