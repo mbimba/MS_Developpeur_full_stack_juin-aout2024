@@ -39,15 +39,19 @@ function get_categories($conn, $limit = null, $offset = null) {
 
 // Fonction pour récupérer les plats les plus vendus de la base de données
 function get_best_sellers($conn, $limit) {
-    // Requête SQL pour sélectionner les images des plats les plus vendus
-    $sql = "SELECT p.image FROM plat p JOIN commande c ON p.id = c.id_plat GROUP BY p.id ORDER BY COUNT(c.id) DESC LIMIT $limit";
-   // Préparer la requête
+    // Requête SQL pour sélectionner les informations nécessaires des plats les plus vendus
+    $sql = "SELECT p.id, p.libelle, p.image 
+            FROM plat p 
+            JOIN commande c ON p.id = c.id_plat 
+            GROUP BY p.id 
+            ORDER BY COUNT(c.id) DESC 
+            LIMIT :limit";
     $stmt = $conn->prepare($sql);
-    // Exécuter la requête
+    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
     $stmt->execute();
-    // Récupérer tous les résultats sous forme de tableau associatif
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
 
 /*                             *************************************************             */
 

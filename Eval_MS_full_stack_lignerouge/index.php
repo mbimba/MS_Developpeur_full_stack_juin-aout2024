@@ -101,7 +101,7 @@ $best_sellers = get_best_sellers($conn, 3); // Récupère les 3 plats les plus v
                         <?php foreach ($best_sellers as $plat): ?>
                             <div class="col-sm-4 p-3 bg-dark text-white">
                                 <img class="rounded-2 mx-auto d-block border border-black-1" src="Mesimages/<?php echo htmlspecialchars($plat['image']); ?>" width="50%" height="80%" alt="Image de <?php echo htmlspecialchars($plat['libelle']); ?>">
-                                <h3><?php echo htmlspecialchars($plat['libelle']); ?></h3>
+                                <h3 class="plusvendu"><?php echo htmlspecialchars($plat['libelle']); ?></h3>
                                 <p><?php echo htmlspecialchars($plat['description']); ?></p>
                             </div>
                         <?php endforeach; ?>

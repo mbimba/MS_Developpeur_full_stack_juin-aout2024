@@ -70,6 +70,9 @@ video{        /* La vidéo prend toute la largeur de la page */
   
 }
 
+.plusvendu{
+  font-size: smaller; /* POur réduire la taille du libellé des plats les plus vendus sur la page index.php */
+}
 
 
 /* -------------------------------------------MEDIA QUIERIES PAGE ACCUEIL -------------------------------------------------------------*/
