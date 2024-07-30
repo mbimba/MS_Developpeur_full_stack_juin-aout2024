@@ -17,8 +17,15 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `categorie`
---
+-- Supprime la base de données si elle existe.
+DROP DATABASE IF EXISTS thedistrict;
+
+-- Création de la base de données.
+CREATE DATABASE thedistrict;
+USE thedistrict;
+
+-- Table structure for table `categorie`.
+
 
 DROP TABLE IF EXISTS `categorie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
