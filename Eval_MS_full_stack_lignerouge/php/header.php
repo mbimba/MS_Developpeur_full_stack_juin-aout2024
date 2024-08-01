@@ -19,18 +19,24 @@
         </div>
         <div class="container-fluid d-flex justify-content-evenly">  <!-- Conteneur pour les liens de navigation -->
             <ul class="navbar-nav">    <!-- Liste non ordonnée pour les liens de navigation -->
-                <li class="nav-item col-sm-4"> <!-- Lien vers index.php avec la classe "active" si la page actuelle est index.php -->
+                <li class="nav-item col-sm-3"> <!-- Lien vers index.php avec la classe "active" si la page actuelle est index.php -->
                     <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/index.php') { echo 'active'; } ?> espace" href="index.php">Accueil</a>
                 </li>
-                <li class="nav-item col-sm-4"> <!-- Lien vers categorie.php avec la classe "active" si la page actuelle est categorie.php ou l'une des sous-catégories -->
+                <li class="nav-item col-sm-3"> <!-- Lien vers categorie.php avec la classe "active" si la page actuelle est categorie.php ou l'une des sous-catégories -->
                     <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/categorie.php') { echo 'active'; } ?> espace" href="categorie.php">Catégorie</a>
                 </li>
-                <li class="nav-item col-sm-4"> <!-- Lien vers touslesplats.php avec la classe "active" si la page actuelle est touslesplats.php -->
+                <li class="nav-item col-sm-3"> <!-- Lien vers touslesplats.php avec la classe "active" si la page actuelle est touslesplats.php -->
                     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], '/plats.php') !== false) { echo 'active'; } ?> espace" href="plats.php">Plat</a> <!-- // Vérifie si la chaîne de caractères "/plats.php" est présente dans l'URI actuelle. -->
                 </li>
-                <li class="nav-item col-sm-4"> <!-- Lien vers contact.php avec la classe "active" si la page actuelle est contact.php -->
+                <li class="nav-item col-sm-3"> <!-- Lien vers contact.php avec la classe "active" si la page actuelle est contact.php -->
                     <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/contact.php') { echo 'active'; } ?> espace" href="contact.php">Contact</a>
                 </li>
+                <li class="nav-item col-sm-3 ">
+                <a class="nav-link smalltext <?php if ($_SERVER['REQUEST_URI'] == '/form_connexion.php') { echo 'active'; } ?> espace" href="form_connexion.php">Connexion</a>
+                </li>
+                <li class="nav-item col-sm-3">
+                <a class="nav-link smalltext <?php if ($_SERVER['REQUEST_URI'] == '/form_inscription.php') { echo 'active'; } ?> espace" href="form_inscription.php">Inscription</a>
+            </li>
             </ul>
         </div>
     </nav>

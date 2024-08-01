@@ -12,6 +12,11 @@
 }
 
 
+.smalltext{                       /* Pour réduire la taille du bouton "connexion" et "inscription" de l'entete" partie nav */
+  font-size:x-small;
+  color:#EE82EE;
+}
+
 .barrerecherche{               /* Pour fixer la barre de recherche sur la vidéo */
   position: absolute;
   top: 50%;
@@ -194,7 +199,7 @@ span{
   text-align: center;
 }
 
-.bordure {                                /* Pour ajouter une bordure au formulaire commande et contact  */
+.bordure {                                /* Pour ajouter une bordure au formulaire commande et contact et les formulaires d'enregistrement et de connexion */
   border-top: 5px #252b29 double;
   border-right: 5px #252b29 double;
   border-bottom: 5px #252b29 double;
@@ -248,4 +253,29 @@ span{
 /*------------------------------------------Mon foooter-------------------------------------------------------- */
 .taille{
   font-size: 0.8em;     /* Pour réduire la taille de texte "politique de confidentialité" et "mentions légales" */
+
+}
+
+.monfooter{
+padding: 20px;
+clear: both;
+
+}
+/*------------------------------------------Mes formulaires d'inscription et de connexion ------------------------------------------------------- */
+.monmain {
+  flex: 0;  /* Supprimer la marge entre la vidéo et le début de mon formulaire */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.float-right {       /* Pour mettre le bouton connecter et s'inscrire à droite */
+  float: right;
+  margin-left: 10px;
 }

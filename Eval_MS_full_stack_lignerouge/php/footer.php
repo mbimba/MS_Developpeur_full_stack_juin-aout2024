@@ -2,7 +2,7 @@
 
 <footer class="" style="background-color: #4A394a;">
     <!-- Grid container -->
-    <div class="container p-4">  <!-- Conteneur pour le pied de page -->
+    <div class="container p-4 monfooter">  <!-- Conteneur pour le pied de page -->
         <!-- Section: Images -->
         <section class="mb-2">  <!-- Section pour les images des réseaux sociaux -->
             <div class="row">
